@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetHelpInfobyPageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pageID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHelpInfobyPageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHelpInfobyPageIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByCondition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryByConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryByConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHelpInfobyPageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHelpInfobyPageID" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpInfobyPageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHelpInfobyPageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryByCondition" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryByConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpInfobyPageIDHttpGetIn">
+    <wsdl:part name="pageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpInfobyPageIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionHttpGetIn">
+    <wsdl:part name="subject" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpInfobyPageIDHttpPostIn">
+    <wsdl:part name="pageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHelpInfobyPageIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionHttpPostIn">
+    <wsdl:part name="subject" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryByConditionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceInfoSoap">
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <wsdl:input message="tns:GetHelpInfobyPageIDSoapIn" />
+      <wsdl:output message="tns:GetHelpInfobyPageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <wsdl:input message="tns:QueryByConditionSoapIn" />
+      <wsdl:output message="tns:QueryByConditionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceInfoHttpGet">
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <wsdl:input message="tns:GetHelpInfobyPageIDHttpGetIn" />
+      <wsdl:output message="tns:GetHelpInfobyPageIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <wsdl:input message="tns:QueryByConditionHttpGetIn" />
+      <wsdl:output message="tns:QueryByConditionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceInfoHttpPost">
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <wsdl:input message="tns:GetHelpInfobyPageIDHttpPostIn" />
+      <wsdl:output message="tns:GetHelpInfobyPageIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <wsdl:input message="tns:QueryByConditionHttpPostIn" />
+      <wsdl:output message="tns:QueryByConditionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceInfoSoap" type="tns:WebServiceInfoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <soap:operation soapAction="http://tempuri.org/GetHelpInfobyPageID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <soap:operation soapAction="http://tempuri.org/QueryByCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceInfoSoap12" type="tns:WebServiceInfoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <soap12:operation soapAction="http://tempuri.org/GetHelpInfobyPageID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <soap12:operation soapAction="http://tempuri.org/QueryByCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceInfoHttpGet" type="tns:WebServiceInfoHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <http:operation location="/GetHelpInfobyPageID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <http:operation location="/QueryByCondition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceInfoHttpPost" type="tns:WebServiceInfoHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetHelpInfobyPageID">
+      <http:operation location="/GetHelpInfobyPageID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByCondition">
+      <http:operation location="/QueryByCondition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceInfo">
+    <wsdl:port name="WebServiceInfoSoap" binding="tns:WebServiceInfoSoap">
+      <soap:address location="http://www.360ly.com/webserviceinfo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceInfoSoap12" binding="tns:WebServiceInfoSoap12">
+      <soap12:address location="http://www.360ly.com/webserviceinfo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceInfoHttpGet" binding="tns:WebServiceInfoHttpGet">
+      <http:address location="http://www.360ly.com/webserviceinfo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceInfoHttpPost" binding="tns:WebServiceInfoHttpPost">
+      <http:address location="http://www.360ly.com/webserviceinfo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

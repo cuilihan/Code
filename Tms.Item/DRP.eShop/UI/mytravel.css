@@ -1,0 +1,45 @@
+﻿
+.mytravel {
+     width:100%;
+}
+    
+    .mytravel span {
+        display:inline-block; background:url(image/arrow_right.png) no-repeat 0px 4px; width:18px;  height:16px;
+    }
+    .mytravel ul {
+     margin:5px 0px; padding:0px;
+    }
+        .mytravel ul li {
+         margin:0px; padding:0px;  list-style-type:none; height:24px; line-height:24px;
+        }
+.place {
+    background:url(image/place.png) no-repeat center left; padding-left:18px;
+}
+.title {
+    height:26px; line-height:26px; border-bottom:1px solid #eee; font-weight:bold;
+}
+.tab_button {
+  padding:5px 10px 0px 10px;
+}
+    .tab_button a {
+     display:inline-block; padding:2px 5px; margin-right:5px; text-decoration:none; cursor:pointer;
+    }
+        .tab_button a:hover {
+          border-bottom:2px solid red;
+        }
+.tab_button_on {
+    border-bottom:2px solid red;
+}
+.toolbar {
+text-align:right;
+}
+.toolbar a{
+    display:inline-block; padding:3px 5px; border:1px solid #ccc; margin-right:5px; text-decoration:none; cursor:pointer;
+}
+    .toolbar a:hover {
+        color:red;
+    }
+.split {
+    height: 10px; margin:8px 0px;
+    background-color: #EEEEEE;
+}

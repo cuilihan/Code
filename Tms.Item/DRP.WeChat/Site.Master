@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DRP.WeChat.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>旅管家业务管理系统</title>
+    <script src="/Script/jquery.js"></script>
+    <script src="/Script/drp.core.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/Script/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/UI/dashboard.css" rel="stylesheet" />
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="nav-bg navbar-fixed-bottom">
+            <div id="navbar">
+                <ul class="nv">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/Module/Crm/Customer.aspx">客户</a></li>
+                    <li><a href="/Module/Order/OrderList.aspx">订单</a></li>
+                    <li><a href="/Module/Rpt/Report.aspx" style="border-right: 0px #fff solid !important">统计报表</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-bottom: 55px">
+            <div class="row">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

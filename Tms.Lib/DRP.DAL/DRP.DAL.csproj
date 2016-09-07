@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{667EC98E-FE05-4C7D-89A8-CA52C9C074E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRP.DAL</RootNamespace>
+    <AssemblyName>DRP.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\DRP.Library\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core">
+      <HintPath>..\..\DRP.Library\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveRecord.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="DataAccess\BudgetDAL.cs" />
+    <Compile Include="DataAccess\CustomerDAL.cs" />
+    <Compile Include="DataAccess\CustomerRateDAL.cs" />
+    <Compile Include="DataAccess\DrawMoneyDAL.cs" />
+    <Compile Include="DataAccess\GuideCheckAccountDAL.cs" />
+    <Compile Include="DataAccess\OmNavGroupDAL.cs" />
+    <Compile Include="DataAccess\OmNavigateDAL.cs" />
+    <Compile Include="DataAccess\OmRptDAL.cs" />
+    <Compile Include="DataAccess\OrderCostDAL.cs" />
+    <Compile Include="DataAccess\OrderProfitDAL.cs" />
+    <Compile Include="DataAccess\OrderQuantityDAL.cs" />
+    <Compile Include="DataAccess\OrderSeatDAL.cs" />
+    <Compile Include="DataAccess\OrderSourceDAL.cs" />
+    <Compile Include="DataAccess\OrdOrderInfoDAL.cs" />
+    <Compile Include="DataAccess\OrdOrderInvoiceDAL.cs" />
+    <Compile Include="DataAccess\PayCheckInDAL.cs" />
+    <Compile Include="DataAccess\PermissionDAL.cs" />
+    <Compile Include="DataAccess\ResourceDAL.cs" />
+    <Compile Include="DataAccess\RptDAL.cs" />
+    <Compile Include="DataAccess\SupplierInvoiceDAL.cs" />
+    <Compile Include="DataAccess\TourOrderDAL.cs" />
+    <Compile Include="DataAccess\UserInfoDAL.cs" />
+    <Compile Include="DataAccess\IncomeCheckInDAL.cs" />
+    <Compile Include="DRPDB.cs" />
+    <Compile Include="Model\GuideCheckAccountEntity.cs" />
+    <Compile Include="Model\V_Ord_CheckAccountEntity.cs" />
+    <Compile Include="Model\V_UserInfo_AllEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="Structs.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

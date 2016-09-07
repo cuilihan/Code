@@ -1,0 +1,60 @@
+﻿.wrapper {
+    border: 1px solid #eee;
+    text-align: center;
+    margin: 10px 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: #eee 0px 0px 5px;
+    -moz-box-shadow: #eee 0px 0px 5px;
+    box-shadow: #eee 0px 0px 5px;
+    background: #fff; 
+    padding: 5px;
+    clear: both;
+}
+
+.wrapper_img {
+    height: 91px;
+    width: 91px;
+    float: left;
+}
+
+    .wrapper_img img {
+        border: 1px solid #eee;
+        width: 90px;
+        height: 90px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        padding: 1px;
+    }
+
+.wrapper_info {
+    height: 91px;
+    float: left;
+    text-align: left;
+    padding: 5px 10px 2px 10px;
+}
+
+    .wrapper_info ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .wrapper_info li {
+        height: 24px;
+        line-height: 24px;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+        .wrapper_info li a {
+        display:inline-block; margin-right:1em;
+        }
+
+.mytravel {
+    background: url(image/place.png) no-repeat center left;
+    padding-left: 18px;
+    font-size: 15px;
+    font-weight: bold;
+}

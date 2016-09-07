@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DRP.Message.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DRP_Message_SmsService_SmsService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wsif.vcomcn.com/SmsService.asmx</Value>
+    </Setting>
+    <Setting Name="DRP_Message_XWWebReference_WebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://211.147.239.62/Service/WebService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

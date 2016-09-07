@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--短信模板定义-->
+<document>
+  <!--验证类短信模板-->
+  <sms type="1">{0}（旅管家手机动态码），如非本人操作，请忽略本短信。</sms>
+</document>

@@ -1,0 +1,60 @@
+﻿.rolelist{ margin-top: 10px; line-height:24px;}
+.rolelist a{display:inline-block; margin-right:15px;}
+
+/************页面布局 Begin******************/
+#layout_top{background:url(images/headHd.png) repeat-x; height:47px; overflow:hidden;}
+.layout_top_logo{height:45px; float:left;color:#fff; font-size:22px; font-weight:800; font-family:Arial; line-height:27px; padding-left:160px; 
+                 background:url(images/logo.png) no-repeat;} 
+.layout_top_logo span{ font-family:微软雅黑; font-size:20px; font-weight:bold;padding-left:5px; padding-top:10px; display:inline-block;  }
+.layout_top_toolbar{height:45px; float:right;text-align:right; padding-top:3px; height:42px; overflow:hidden; }
+.layout_top_toolbar li{ float:right; margin-right:10px; cursor:pointer;height:22px;}
+.layout_top_toolbar li a { color:#fff; text-decoration:none; }
+.layout_top_scroll{ height:22px; color:#fff; }
+.layout_top_scroll li{ float:none !important;}
+.layout_top_scroll li a { color:#F7F468;}
+.layout_top_scroll li a:hover { color:#FAF7D4; text-decoration:underline;}
+.layout_top_scroll li span{ padding-right:10px;}
+#layout_menu_bg{background:url(images/headMenus.png) repeat-x; height:62px; overflow:hidden;}
+.layout_menu_user{background:url(images/menusBg.gif) no-repeat right bottom; float:left;width:181px; height:62px;}
+.layout_menu_user_info{background:url(images/login_user2.png) no-repeat left center; width:130px; height:50px; line-height:19px; color:#fff;padding:12px 0px 0px 40px;}
+
+
+.layout_menu_user_info a{ text-decoration:none; color:#fff;}
+.layout_menu_user_info span{ font-family:Arial; display:inline-block; padding-top:2px; }
+.layout_menu_user_msg{ background:url(images/tallnew.png) no-repeat 1px -17px;display:inline-block; height:22px; width:36px; }
+.layout_menu_user_msg i{ background:url(images/tallnew.png) no-repeat -1px 0px;display:inline-block; height:16px; width:10px; }
+.jq_hidebox{display:none;position:absolute;right:10px;top:24px; width:350px; height:150px;text-align:left; padding:10px; border:1px solid #dfdfdf;box-shadow:0 1px 2px #ccc;background:#fff;z-index:10;}
+
+
+.layout_menu_right{float:left; height:62px; overflow:hidden; position:relative; }
+.layout_menu_nav{float:left; height:62px;position:relative;overflow:hidden;}
+.navRollWrap{ display:inline-block;position:absolute; }
+
+.layout_menu_nav li{ display:inline-block; float:left;background:url(images/menusBg.gif) no-repeat right bottom; width:80px; height:62px; }
+.layout_menu_nav_on{ display:inline-block; float:left;background:url(images/navMod.gif) no-repeat left bottom !important; height:62px; }
+.layout_menu_nav li:hover{ background:url(images/navMod.gif) no-repeat; width:80px; height:62px;cursor:pointer; } 
+.layout_menu_nav li a{color:#fff; display:inline-block; text-decoration:none; text-align:center; width:80px; padding-top:40px; height:22px;}
+
+.layout_menu_nav_btn_l {display:inline-block; background:url(images/arrow_l.png) no-repeat center; text-align: center;width: 30px; height:62px; float:left; cursor:pointer; }
+.layout_menu_nav_btn_r {display:inline-block; background:url(images/arrow_r.png) no-repeat center; text-align: center;width: 30px; height:62px; float:right; cursor:pointer; }
+.customer{background:url(images/customer.png) no-repeat 32px 10px; }
+.resource{background:url(images/resource.png) no-repeat 32px 10px; }
+.finance{background:url(images/finance.png) no-repeat 32px 10px; }
+.system{background:url(images/system.png) no-repeat 32px 10px; }
+.product{background:url(images/product.png) no-repeat 32px 10px; }
+.sales{background:url(images/sales.png) no-repeat 32px 10px; }
+.op{background:url(images/op.png) no-repeat 32px 10px; }
+.report{background:url(images/rpt.png) no-repeat 32px 10px; }
+.manager{background:url(images/manager.png) no-repeat 32px 10px; }
+.quotation{background:url(images/template.png) no-repeat 32px 10px; }
+.home{background:url(images/pHome.png) no-repeat 32px 10px; }
+
+.navigate_left
+{ background-color:#F1F6FF;
+}
+.navigate_left li{ background:url(images/itembg.jpg) no-repeat bottom; height:39px; line-height:39px; float:none !important; padding-left:30px;  }
+.navigate_left li span{ font-family:Arial; display:inline-block; margin-right:10px;  }
+.navigate_left li a{text-decoration:none; color:#000; }
+.navigate_left li a:hover{ color:red; }
+.navigate_left_li_on{color:red !important;}
+/************页面布局 end******************/

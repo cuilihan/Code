@@ -1,0 +1,4 @@
+﻿<asp:TextBox runat="server" style="height:26px;" CssClass="textbox easyui-validatebox"></asp:TextBox> 
+<asp:DropDownList runat="server" style="height:26px;" CssClass="textbox easyui-validatebox"></asp:DropDownList> 
+<asp:RadioButtonList runat="server" CssClass="textbox easyui-validatebox"></asp:RadioButtonList> 
+<asp:FileUpload CssClass="textbox" style="height:26px;" runat="server" /> 

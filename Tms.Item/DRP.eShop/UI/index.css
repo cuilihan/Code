@@ -1,0 +1,221 @@
+﻿.menus {
+    border-bottom:1px solid #d1d3d4;
+    border-left:1px solid #d1d3d4;
+    margin:15px 0px;
+}
+
+    .menus ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .menus ul li {
+            padding: 0px;
+            margin: 0px;
+            float: left;
+            display: inline-block;
+            width: 33.3%;
+            border-top: 1px solid #d1d3d4;
+            border-right: 1px solid #d1d3d4;
+            height: 80px;
+        }
+    .menus a {
+        height:80px;display:inline-block;
+        width:100%;padding-top:45px; cursor:pointer; text-decoration:none;
+    }
+.menu_mytravel {
+    background:url(image/mytravel.png) no-repeat center 10px;
+}
+.menu_myinfo {
+    background:url(image/lock.png) no-repeat center 10px;
+}
+.menu_about {
+    background:url(image/aboutus.png) no-repeat center 10px;
+}
+.menu_recommand {
+    background:url(image/recommand.png) no-repeat center 10px;
+}
+.menu_ticketorder {
+background:url(image/ticketorder.png) no-repeat center 10px;
+}
+.menu_ticketbook {
+    
+background:url(image/book.png) no-repeat center 10px;
+}
+
+
+.buttons {
+    text-align: center;
+}
+
+    .buttons a {
+        display: inline-block;
+        height: 70px;
+        float: left;
+        width: 45%;
+        margin: 5px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        font-family: 微软雅黑;
+        text-decoration: none;
+    }
+
+.btnSearch {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    color: #fff;
+    text-decoration: none;
+    background: #25A6DE url(UI/image/grad-overlay.png) repeat-x;
+    color: #fff;
+}
+
+.nav_foreign {
+    background: #b6ff00 url(image/nav_foreign.png) no-repeat 5px 15px;
+    border: 1px solid #b6ff00;
+    color: #ED5564;
+    padding-left: 35px;
+}
+
+.nav_civil {
+    background: #ED5564 url(image/nav_civil.png) no-repeat 5px 15px;
+    border: 1px solid #ED5564;
+    color: #fff;
+    padding-left: 35px;
+}
+
+.nav_bus {
+    background: #AC92ED url(image/nav_bus.png) no-repeat 5px 15px;
+    border: 1px solid #AC92ED;
+    color: #fff;
+    padding-left: 35px;
+}
+
+.nav_free {
+    background: #5D75EC url(image/nav_free.png) no-repeat 5px 15px;
+    border: 1px solid #5D75EC;
+    color: #fff;
+    padding-left: 35px;
+}
+
+.nav_ship {
+    background: #48CFAE url(image/nav_ship.png) no-repeat 5px 15px;
+    color: #fff;
+    border: 1px solid #48CFAE;
+    padding-left: 35px;
+}
+
+.nav_island {
+    background: #FFCE55 url(image/nav_island.png) no-repeat 5px 15px;
+    color: #fff;
+    border: 1px solid #FFCE55;
+    padding-left: 35px;
+}
+
+.nav_visa {
+    background: #FB6E52 url(image/nav_visa.png) no-repeat 5px 15px;
+    color: #fff;
+    border: 1px solid #FB6E52;
+    padding-left: 35px;
+}
+
+.nav_o {
+    background: #A0D468 url(image/nav_o.png) no-repeat 5px 15px;
+    color: #fff;
+    border: 1px solid #A0D468;
+    padding-left: 35px;
+}
+
+.nav_about {
+    background: #5D9CEC url(image/nav_about.png) no-repeat 5px 15px;
+    color: #fff;
+    border: 1px solid #5D9CEC;
+    padding-left: 35px;
+}
+
+
+/*图片轮播**/
+#slides {
+    display: none;
+}
+
+    #slides .slidesjs-navigation {
+        margin-top: 5px;
+    }
+
+.slidesjs-pagination {
+    margin: 2px 0 0;
+    float: right;
+    list-style: none;
+}
+
+    .slidesjs-pagination li {
+        float: left;
+        margin: 0 1px;
+    }
+
+        .slidesjs-pagination li a {
+            display: block;
+            width: 13px;
+            height: 0;
+            padding-top: 13px;
+            background-image: url(image/pagination.png);
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+        }
+
+            .slidesjs-pagination li a.active,
+            .slidesjs-pagination li a:hover.active {
+                background-position: 0 -13px;
+            }
+
+            .slidesjs-pagination li a:hover {
+                background-position: 0 -26px;
+            }
+
+
+.container {
+    margin: 0 auto;
+}
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+    .container {
+        width: auto;
+    }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+    .container {
+        width: auto;
+    }
+}
+
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 979px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* For larger displays */
+@media (min-width: 980px) and (min-width: 1200px) {
+    .container {
+        width: 940px;
+    }
+}

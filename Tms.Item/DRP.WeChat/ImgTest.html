@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="Script/jquery.js"></script>
+    <script src="Script/compress/upload.js"></script>
+    <script src="Script/compress/mobileBUGFix.mini.js"></script>
+</head>
+<body>
+    <div id="error"></div>
+    <input type="file" name="test" id="test" />
+    <img src="" id="img" style="width: 120px;" />
+    <input type="hidden" id="imgurl" />
+    <script>
+        $('#test').UploadImg({
+            url: '/Service/WeChatHandler.ashx?action=2&r=' + new Date().toString(),
+            width: '320',
+            //height : '200',
+            quality: '0.8', //压缩率，默认值为0.8
+            // 如果quality是1 宽和高都未设定 则上传原图
+            mixsize: '10000000',
+            //type : 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/bmp,image/x-png',
+            before: function (blob) {
+                $('#img').attr('src', blob);
+            },
+            error: function (res) {
+                $('#img').attr('src', '');
+                $('#error').html(res);
+            },
+            success: function (res) {
+                $('#imgurl').val(res);
+            }
+        });
+</script>
+
+</body>
+</html>

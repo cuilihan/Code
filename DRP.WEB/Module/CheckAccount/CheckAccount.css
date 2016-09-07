@@ -1,0 +1,58 @@
+﻿ 
+      .subject
+        {
+            border: 1px solid #ccc;
+            padding: 20px;
+            line-height: 22px;
+            text-align: left;
+            min-height: 550px;
+        }
+
+        .subject_t
+        {
+            border-bottom: 1px solid #4CB6E6;
+            margin-bottom: 10px;
+        }
+
+            .subject_t span
+            {
+                display: inline-block;
+                width: 140px;
+                background-color: #F7B300;
+                color: #fff;
+                height: 30px;
+                font-family: 微软雅黑;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+        .txt_50
+        {
+            border: 0px;
+            width: 50px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+
+        .txt_p99
+        {
+            border: 0px;
+            width: 99%;
+            border-bottom: 1px solid #000;
+        }
+          .txt
+        {
+            border: 0px;
+            border-bottom: 1px solid #000;
+        }
+        .txtRight
+        {
+            text-align: right;
+        }
+.btnSave
+{
+    background:url(/UI/Themes/Default/Images/img3.gif) no-repeat; height:55px; line-height:55px; width:139px;
+    display:inline-block; font-size:15px; font-weight:bold; color:#fff;
+}

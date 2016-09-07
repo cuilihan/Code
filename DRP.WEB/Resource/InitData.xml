@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--系统初始化数据-->
+<document>
+  <!--线路类型-->
+  <data name="RouteType">
+    <item>周边短线</item>
+    <item>国内长线</item>
+    <item>出境线路</item>
+  </data>
+  <!--目的地:引用另一数据文件-->
+  <data name="Destination">
+    <item>Destination.xml</item>
+  </data>
+  <!--收款类型-->
+  <data name="CollectedType">
+    <item>现金</item>
+    <item>转账</item>
+    <item>其他</item>
+  </data>
+  <!--订单来源-->
+  <data name="OrderSource">
+    <item>老客户</item>
+    <item>百度推广</item>
+    <item>网站</item>
+    <item>微站</item>
+    <item>平面广告</item>
+    <item>其他</item>
+  </data>
+  <!--开票项目-->
+  <data name="InvoiceItem">
+    <item>旅游服务费</item>
+    <item>会议服务费</item>
+    <item>综合服务费</item>
+    <item>其他</item>
+  </data>
+  <!--发票领取方式-->
+  <data name="InvoiceFetchType">
+    <item>客户自取</item>
+    <item>业务代取</item>
+    <item>寄送</item>
+    <item>其他</item>
+  </data>
+  <!--导游领款方式-->
+  <data name="DrawMoneyType">
+    <item>现金</item>
+    <item>转账</item>
+    <item>其他</item>
+  </data>
+  <!--非订单收入类型-->
+  <data name="NonOrderIncomeType">
+    <item>佣金</item>
+    <item>开票</item>
+    <item>其他</item>
+  </data>
+  <!--非订单支出类型-->
+  <data name="NonOrderPayType">
+    <item>管理费</item>
+    <item>办公费</item>
+    <item>物业费</item>
+    <item>运营费</item>
+    <item>其他</item>
+  </data>
+  <!--单项业务类型-->
+  <data name="BizType">
+    <item>机票</item>
+    <item>签证</item>
+    <item>订房</item>
+    <item>订车</item>
+    <item>订票</item>
+    <item>其他</item>
+  </data>
+  <!--客户类型-->
+  <data name="CustomerType">
+    <item>散客</item>
+    <item>团队</item>
+    <item>其他</item>
+  </data>
+  <!--客户销售线索类型-->
+  <data name="CustomerTraceType">
+    <item>咨询</item>
+    <item>回访</item>
+    <item>拜访</item>
+    <item>报价</item>
+    <item>投诉</item>
+    <item>其他</item>
+  </data>
+  <!--资源导游等级-->
+  <data name="GuideLevel">
+    <item>初级</item>
+    <item>中级</item>
+    <item>高级</item>
+    <item>其他</item>
+  </data>
+  <!--资源酒店星级-->
+  <data name="HotelStarLv">
+    <item>挂三星</item>
+    <item>准三星</item>
+    <item>挂四星</item>
+    <item>准四星</item>
+    <item>挂五星</item>
+    <item>准五星</item>
+    <item>其他</item>
+  </data>
+  <!--资源车队规模-->
+  <data name="MotorcadeScale">
+    <item>小型车队</item>
+    <item>大型车队</item>
+    <item>综合车队</item>
+    <item>其他</item> 
+  </data>
+  <data name="CredentialType">
+    <item>护照</item>
+    <item>回乡证</item>
+    <item>台胞证</item>
+    <item>港澳通行证</item>
+    <item>海员证</item>
+    <item>大陆居民往来台湾通行证</item>
+  </data>
+</document>

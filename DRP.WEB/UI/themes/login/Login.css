@@ -1,0 +1,57 @@
+ 
+/******后台管理登录********/
+*{font-size:9pt;border:0;margin:0;padding:0;}
+body{font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
+.logintop{height:47px; background:url(images/loginbg2.png) repeat-x;z-index:1; width:100%;}
+.logintop span{color:#fff; line-height:47px; background:url(images/loginsj.png) no-repeat 21px 18px; text-indent:44px; float:left;}
+.logintop ul{float:right; padding-right:30px;}
+.logintop ul li{float:left; margin-left:20px; line-height:47px; position:relative;}
+.logintop ul li a{color:#fff; display:inline-block;}
+ 
+.logintop li.hover a{ z-index:200;padding:0px 15px; border:1px solid #ccc; font-weight:bold; color:#000; color:red; text-align:center; background-color:#fff; }
+.logintop li.hover i{height: 0;font-size: 0; line-height: 0; border-style: solid; border-width: 0px 5px 5px 5px; border-color: #ccc transparent; margin-left:2px;display:inline-block; } 
+
+
+.loginbody{ width:998px;margin:0 auto; text-align:center; margin-top:40px; height:380px; overflow:hidden; }
+.remark{background:url(images/logo.png) no-repeat 20px 20px; width:520px; height:280px; overflow:hidden; float:left; padding:100px 10px 10px 20px;text-align:left; }
+.remark div { font-family:微软雅黑; font-size:18px; line-height:50px;}
+ .title_label{font-family:微软雅黑; font-size:22px; line-height:40px; font-weight:bold;    }
+ 
+.loginboxwrap{ width:380px; height:350px; float:right; border: 1px solid #696;margin:0 auto; text-align: center; margin:15px;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;-webkit-box-shadow: #666 0px 0px 10px;-moz-box-shadow: #666 0px 0px 10px;box-shadow: #666 0px 0px 10px;background: #fff;behavior: url(/PIE.htc);}
+.toolbar{ height:40px; border-bottom:1px solid #C0CDD9; line-height:40px; margin:2px 1px 20px 1px;  background-color:#F9FBFE;}
+.toolbar li{  display:inline-block; width:50%; float:left; line-height:40px;}
+.toolbar li a{font-family:微软雅黑; font-size:15px; height:38px; font-weight:bold; color:#ccc; width:110px;display:inline-block;}
+.toolbar_on a{ border-bottom:2px solid #696; color:#000 !important;}
+.ubox{ margin-top:30px;}
+.ubox li{ margin-bottom:10px; text-align:left; padding-left:20px;}
+.loginfooter{background-color: #28A7E1;position:absolute; bottom:0; width:100%; }
+.loginfooter a{ color:#fff;}
+.loginbottom{background-color: #28A7E1;width:100%; }
+.loginbottom a{ color:#fff;}
+.loginbm{height:50px; line-height:50px; text-align:center; background:url(images/loginbg2.png) repeat-x;color:#0b3a58;}
+.logincode{width:90px; height:40px; background:url(images/logincode.png) no-repeat; border:none; line-height:40px; padding: 0 5px; font-size:20px; color:#ccc;}
+.loginuser{width:299px; height:48px; background:url(images/loginuser.png) no-repeat; border:none; line-height:48px; padding-left:44px; font-size:20px;color:#ccc;}
+.loginpwd{width:299px; height:48px; background:url(images/loginpassword.png) no-repeat; border:none;line-height:48px; padding-left:44px; font-size:20px; color:#90a2bc;}
+.loginbtn{width:111px;height:35px; background:url(images/buttonbg.png) repeat-x; font-size:14px; font-weight:bold; color:#fff;cursor:pointer; line-height:35px;}
+.r-refresh{ background:url(images/refresh.gif) no-repeat; cursor:pointer; display:inline-block; width:80px;height:40px;}
+
+/* 弹出模拟窗口：用于选择多角色用户 */
+.dialog-overlay{opacity:0.5; filter:alpha(opacity:50); background:gray}
+.dialog{ background:#14547A; padding:10px; opacity:1; border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;    _width:expression('200px'); }
+.dialog .bar{cursor:move;color:#fff;background:#14547A; padding:6px;min-height:15px; _height:expression('20px');}
+.dialog .bar .title{float:left;margin-right:10px;}
+.dialog .bar .close{float:right;cursor:pointer;text-decoration:underline; color:#fff;}
+.dialog .content{background:#fff;padding:10px; width:700px; height:340px; }
+
+.tipbg{ background:url(images/chose.jpg) no-repeat; width:520px; padding-top:75px; height:253px;padding-left:180px;}
+.roletitle{ font-size:30px; color:#C72322; font-weight:bold; font-family:Arial; padding-left:120px;  padding-bottom:6px;}
+.rolelist{width:280px; height:90px;margin-left:100px;padding:30px 10px 10px 10px;}
+.rolelist li{ line-height:25px;display:inline-block; margin-right:10px; color:blue; font-size:15px;padding:3px 5px;}
+.rolelist li a{ font-size:20px; text-decoration:underline;} 
+.rolefooter{ margin-top:5px; line-height:22px; padding:0px 50px 0px 40px;}
+
+
+.jq_hidebox {display:none;position: absolute;background-color: #fff;left: 0px;top: 46px;zoom: 1;width: 190px;height:190px;text-align: left;padding:5px 10px;
+            box-shadow: 0 1px 2px #ccc; border:1px solid #ccc; border-top:0px; z-index: 100; overflow:hidden; text-align:center;} 
+
+ 

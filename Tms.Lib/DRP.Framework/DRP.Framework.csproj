@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E93C2C74-08D0-4710-B26B-56864CE28A3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRP.Framework</RootNamespace>
+    <AssemblyName>DRP.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\..\DRP.Library\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\DRP.Library\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\DRP.Library\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\DRP.Library\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\DRP.Library\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\DRP.Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="org.in2bits.MyXls">
+      <HintPath>..\..\DRP.Library\org.in2bits.MyXls.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core">
+      <HintPath>..\..\DRP.Library\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\LocalCacheHelper.cs" />
+    <Compile Include="Component\AspNetPage.cs" />
+    <Compile Include="Component\DRPGridView.cs" />
+    <Compile Include="Component\ExpansionGridView.cs" />
+    <Compile Include="Configuration\DRPRedisConfigurationElement.cs" />
+    <Compile Include="Configuration\DRPRedisConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\DRPRedisConfigurationSection.cs" />
+    <Compile Include="Configuration\DRPTaskConfigurationElement.cs" />
+    <Compile Include="Configuration\DRPTaskConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\DRPTaskConfigurationSection.cs" />
+    <Compile Include="Configuration\DRPApiConfigurationElement.cs" />
+    <Compile Include="Configuration\DRPApiConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\DRPApiConfigurationSection.cs" />
+    <Compile Include="Core\BarCodeToHTML.cs" />
+    <Compile Include="Core\ConvertJson.cs" />
+    <Compile Include="Core\CookieHepler.cs" />
+    <Compile Include="Core\CreateRandom.cs" />
+    <Compile Include="Core\DownFile.cs" />
+    <Compile Include="Core\DRPResolveUrl.cs" />
+    <Compile Include="Core\EcanConvertToCh.cs" />
+    <Compile Include="Core\FileManager.cs" />
+    <Compile Include="Core\HtmlHeler.cs" />
+    <Compile Include="Core\ImageHelper.cs" />
+    <Compile Include="Core\MoneyToChs.cs" />
+    <Compile Include="Core\NExcelHelper.cs" />
+    <Compile Include="Core\NPOIHelper.cs" />
+    <Compile Include="Core\PDF2SWF.cs" />
+    <Compile Include="Core\PDFOperation.cs" />
+    <Compile Include="Core\Security.cs" />
+    <Compile Include="Core\ExcelHelper.cs" />
+    <Compile Include="Core\IP.cs" />
+    <Compile Include="Core\JScript.cs" />
+    <Compile Include="Core\ReflectHelper.cs" />
+    <Compile Include="Core\SystemInfo.cs" />
+    <Compile Include="Core\UpLoadFile.cs" />
+    <Compile Include="Core\XmlHelper.cs" />
+    <Compile Include="FTP\FTPClient.cs" />
+    <Compile Include="FTP\FTPHelper.cs" />
+    <Compile Include="FTP\FTPOperater.cs" />
+    <Compile Include="Net\HttpHelper.cs" />
+    <Compile Include="OnLineUser\ActiveUser.cs" />
+    <Compile Include="OnLineUser\PassPort.cs" />
+    <Compile Include="OnLineUser\Script.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSO\SSOAuthentication.cs" />
+    <Compile Include="SSO\SSORequest.cs" />
+    <Compile Include="Core\ConfigHelper.cs" />
+    <Compile Include="Uitlity\DataBindHelper.cs" />
+    <Compile Include="Uitlity\EnumConst.cs" />
+    <Compile Include="Core\MyConvert.cs" />
+    <Compile Include="ViewState\ViewStateCompressPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Zip.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

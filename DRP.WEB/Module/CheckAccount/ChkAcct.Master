@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ChkAcct.master.cs" Inherits="DRP.WEB.Module.CheckAccount.ChkAcct" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../UI/themes/default/layoutui-blue.css" rel="stylesheet" />
+    <link href="/UI/themes/login/Login.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/drp.core.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color: #28A7E1;">
+            <div class="logintop">
+                <asp:Label ID="lblProduct" runat="server" Text=""></asp:Label>
+                <div style="width: 1024px; margin: 0 auto; text-align: center; height: 47px; line-height: 47px;">
+                    <b style="color:#fff; font-size:18px; font-family:微软雅黑;">导游在线报账系统</b>
+                    <div style="width: 120px; text-align: right; float:right;">
+                        <a href="OrderSelect.aspx" style="color: #fff;">订单查询</a>
+                        <a href="Logout.aspx" style="color: #fff; margin-left: 10px;">退出系统</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="margin: 10px auto; width: 1024px; text-align: center;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="loginbottom">
+            <div class="loginbm">
+                Copyright © 2014. All Rights Reserved 技术支持：<a href="http://tms.58datu.com" target="_blank"><asp:Literal ID="lblOrgInfo" runat="server"></asp:Literal></a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

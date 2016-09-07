@@ -1,0 +1,51 @@
+body, div
+{
+    font-size:12px; font-family: Î¢ÈíÑÅºÚ;   margin:0px; padding:0px;
+}
+.wraptop
+{
+    background-color: #28A7E1;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Î¢ÈíÑÅºÚ;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+}
+
+    .wraptop span
+    {
+        font-size: 18px; font-weight:bold;
+    }
+
+.wrapbody
+{
+    margin:0 auto; margin-top:60px;
+    width:998px; text-align:center;
+}
+
+.wrapbody_nav
+{
+    width:188px; float:left;
+    border:1px solid #28A7E1;
+    text-align:left;
+    min-height:600px; padding:10px 5px;
+}
+.wrapbody_right
+{
+    width:795px; float:right;
+}
+.doc_title
+{
+     text-align:center; height:30px; line-height:30px;  font-size:18px; font-weight:bold;
+     border-bottom:1px solid #ccc; padding-bottom:1px;
+}
+.doc_content
+{
+    text-align:left; font-size:13px; line-height:22px;
+    padding:10px;
+}

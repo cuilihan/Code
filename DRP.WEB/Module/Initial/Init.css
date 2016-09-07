@@ -1,0 +1,73 @@
+﻿.init_title
+{
+    color: #c72322;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    padding-top: 5px;
+}
+
+.init_footer
+{
+    margin-top: 5px;
+    line-height: 22px;
+    padding: 0px 50px 0px 40px;
+}
+
+.datalabel
+{
+    text-align: right;
+    padding-right: 5px;
+    width: auto;
+    width: 15%;
+}
+
+.datainput
+{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.datainput_02
+{
+    height: auto;
+    vertical-align: top;
+}
+
+.tblEdit td a
+{
+    width: 60px;
+}
+
+.tblEdit td
+{
+    height: 25px;
+    line-height: 0;
+    padding: 10px;
+}
+
+ul.list_01 li
+{
+    padding-top: 5px;
+}
+
+ul.list_02
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+    ul.list_02 li
+    {
+        float: left;
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+.btn_01
+{
+    margin-top: 5px;
+}

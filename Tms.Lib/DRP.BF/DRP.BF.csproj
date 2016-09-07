@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{771C529B-F853-4901-BE5A-C78780486265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRP.BF</RootNamespace>
+    <AssemblyName>DRP.BF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DocX">
+      <HintPath>..\..\DRP.Library\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="DRP.Cached, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\DRP.Cached.dll</HintPath>
+    </Reference>
+    <Reference Include="DRP.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\DRP.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\DRP.Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="org.in2bits.MyXls, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\org.in2bits.MyXls.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=3.9.44.0, Culture=neutral, PublicKeyToken=1ed8bb93cccf8826, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=3.9.44.0, Culture=neutral, PublicKeyToken=1ed8bb93cccf8826, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=3.9.43.0, Culture=neutral, PublicKeyToken=1ed8bb93cccf8826, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.44.0, Culture=neutral, PublicKeyToken=1ed8bb93cccf8826, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DRP.Library\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\BizCacheHelper.cs" />
+    <Compile Include="CheckAccount\CheckAccount_BF.cs" />
+    <Compile Include="CheckAccount\GuideLogin.cs" />
+    <Compile Include="CheckAccount\OrderBalanceSettlement_BF.cs" />
+    <Compile Include="CheckIn\IncomeCheckIn_BF.cs" />
+    <Compile Include="CheckIn\PayCheckIn_BF.cs" />
+    <Compile Include="Context\UserInfo.cs" />
+    <Compile Include="CrmMrg\CustomerTrace_BF.cs" />
+    <Compile Include="CrmMrg\Customer_BF.cs" />
+    <Compile Include="DataSync\OctConfig.cs" />
+    <Compile Include="DataSync\OctEntity.cs" />
+    <Compile Include="DataSync\OctHelper.cs" />
+    <Compile Include="eShop\eShopConfig.cs" />
+    <Compile Include="eShop\eShopMemeber.cs" />
+    <Compile Include="eShop\mAuthentication.cs" />
+    <Compile Include="eShop\MenuHelper.cs" />
+    <Compile Include="eShop\mHandlerBase.cs" />
+    <Compile Include="eShop\mPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eShop\mUserEntity.cs" />
+    <Compile Include="Fin\CollectedItem_BF.cs" />
+    <Compile Include="Fin\DrawMoney_BF.cs" />
+    <Compile Include="Fin\OrderPayable_BF.cs" />
+    <Compile Include="Fin\SupplierPaid_BF.cs" />
+    <Compile Include="GloMrg\BasicInfo_BF.cs" />
+    <Compile Include="GloMrg\Departure_BF.cs" />
+    <Compile Include="GloMrg\Destination_BF.cs" />
+    <Compile Include="GloMrg\Notice_BF.cs" />
+    <Compile Include="GloMrg\QQ_BF.cs" />
+    <Compile Include="GloMrg\SerialNo_BF.cs" />
+    <Compile Include="GloMrg\UpdateLog_BF.cs" />
+    <Compile Include="Init\Init_BF.cs" />
+    <Compile Include="mSite\mSite_BF.cs" />
+    <Compile Include="My\Favorites_BF.cs" />
+    <Compile Include="OmMrg\NavGroup_BF.cs" />
+    <Compile Include="OmMrg\OmArea_BF.cs" />
+    <Compile Include="OmMrg\OmRpt_BF.cs" />
+    <Compile Include="OmMrg\OmScan_BF.cs" />
+    <Compile Include="OmMrg\OmSms_BF.cs" />
+    <Compile Include="OmMrg\OmUserRpt_BF.cs" />
+    <Compile Include="OmMrg\OmUser_BF.cs" />
+    <Compile Include="OmMrg\Om_PushNotice.cs" />
+    <Compile Include="OmMrg\OrgInfo_BF.cs" />
+    <Compile Include="OmMrg\OrgInit_BF.cs" />
+    <Compile Include="OmMrg\OrgSetting_BF.cs" />
+    <Compile Include="OmMrg\ToolSetting_BF.cs" />
+    <Compile Include="Order\CollectedClaim_BF.cs" />
+    <Compile Include="Order\OrderBudget_BF.cs" />
+    <Compile Include="Order\OrderCollected_BF.cs" />
+    <Compile Include="Order\OrderGuide_BF.cs" />
+    <Compile Include="Order\OrderInvoice_BF.cs" />
+    <Compile Include="Order\OrderUtility.cs" />
+    <Compile Include="Order\Order_BF.cs" />
+    <Compile Include="Order\SupplierInvoice_BF.cs" />
+    <Compile Include="Order\TicketOrder_BF.cs" />
+    <Compile Include="OTA\Area_BF.cs" />
+    <Compile Include="OTA\OTAQuery.cs" />
+    <Compile Include="OTA\OTASetting_BF.cs" />
+    <Compile Include="PageBase\AuthenticationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageBase\HandlerBase.cs" />
+    <Compile Include="PageBase\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProMrg\Product_BF.cs" />
+    <Compile Include="Quotation\QuotationSetting_BF.cs" />
+    <Compile Include="Quotation\Quotation_BF.cs" />
+    <Compile Include="ResMrg\Guide_BF.cs" />
+    <Compile Include="ResMrg\Hotel_BF.cs" />
+    <Compile Include="ResMrg\Insurance_BF.cs" />
+    <Compile Include="ResMrg\Motorcade_BF.cs" />
+    <Compile Include="ResMrg\Other_BF.cs" />
+    <Compile Include="ResMrg\ResourceUtility_BF.cs" />
+    <Compile Include="ProMrg\RouteInfo_BF.cs" />
+    <Compile Include="ProMrg\TourInfo_BF.cs" />
+    <Compile Include="ProMrg\Venue_BF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResMrg\ScenicTicket_BF.cs" />
+    <Compile Include="ResMrg\Shopping_BF.cs" />
+    <Compile Include="ResMrg\TicketAgency_BF.cs" />
+    <Compile Include="ResMrg\TravelAgency_BF.cs" />
+    <Compile Include="ResMrg\Visa_BF.cs" />
+    <Compile Include="RptMrg\RptUtility.cs" />
+    <Compile Include="Search\Search_BF.cs" />
+    <Compile Include="SysMrg\Dept_BF.cs" />
+    <Compile Include="SysMrg\IPFilter_BF.cs" />
+    <Compile Include="OmMrg\Navigate_BF.cs" />
+    <Compile Include="SysMrg\Log_BF.cs" />
+    <Compile Include="SysMrg\Permission_BF.cs" />
+    <Compile Include="SysMrg\Role_BF.cs" />
+    <Compile Include="SysMrg\UserLogin_BF.cs" />
+    <Compile Include="SysMrg\User_BF.cs" />
+    <Compile Include="SysMrg\WechatUser_BF.cs" />
+    <Compile Include="TmsApi\Core\ApiException.cs" />
+    <Compile Include="TmsApi\Core\ITmsServiceProvider.cs" />
+    <Compile Include="TmsApi\Core\ServiceFactory.cs" />
+    <Compile Include="TmsApi\Imp\AirTicketOrderService.cs" />
+    <Compile Include="TmsApi\Imp\OrgInfoSerivce.cs" />
+    <Compile Include="TmsApi\Core\TaskEntity.cs" />
+    <Compile Include="TmsApi\Core\ApiMessage.cs" />
+    <Compile Include="TmsApi\Core\ApiHelper.cs" />
+    <Compile Include="Utility\Attachment_BF.cs" />
+    <Compile Include="Utility\BizUtility.cs" />
+    <Compile Include="Utility\Permisstion_BF.cs" />
+    <Compile Include="Utility\QueryCriteriaBase.cs" />
+    <Compile Include="Utility\SerialNumberHelper.cs" />
+    <Compile Include="WeChat\WeChatIndex_BF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eShop\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DRP.DAL\DRP.DAL.csproj">
+      <Project>{667ec98e-fe05-4c7d-89a8-ca52c9c074e2}</Project>
+      <Name>DRP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DRP.Framework\DRP.Framework.csproj">
+      <Project>{e93c2c74-08d0-4710-b26b-56864ce28a3f}</Project>
+      <Name>DRP.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DRP.Message\DRP.Message.csproj">
+      <Project>{538893f4-b47d-4e57-b640-83a36e5df9de}</Project>
+      <Name>DRP.Message</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,83 @@
+﻿body { background-image: url(images/bg.png);background-repeat: repeat-x;background-color: #ebebeb;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #5f5f5f;} 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {margin: 0px;padding: 0px;}
+input, select, textarea, button { vertical-align: middle; font-family:Tahoma,Arial,'微软雅黑',sans-serif;}
+img { border: 0px; }
+ul, ol { list-style: none;margin: 0px; padding: 0px; }
+li { list-style: none outside none; }
+table { border-collapse: collapse; table-layout: fixed; border-spacing: 0px;}
+td, th { -ms-word-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-all; overflow: hidden;}
+.hide{display:none;}
+.clear{ clear:both;}
+.arrow_up{ height: 0;font-size: 0; line-height: 0; border-style: solid; border-width: 0px 5px 5px 5px; border-color: #ccc transparent; margin-left:2px;display:inline-block; }
+.arrow_down{ height: 0;font-size: 0; line-height: 0; border-style: solid; border-width:5px 5px 0px 5px; border-color: #ccc transparent; margin-left:2px; display:inline-block; }
+
+/******************** 布局 Begin **************************/
+#content_wrap {margin: auto;width: 998px;margin-top: 0;	margin-right: auto;	margin-left: auto;}
+#header { height:94px;}
+.top_left{ width:450px; height:24px; line-height:24px; float:left; background:url(images/newmsg.png) no-repeat left center; padding-left:20px; overflow:hidden; } 
+.top_right{ width:450px; height:24px; line-height:24px; float:right; text-align:right;}
+.top_right a{ text-decoration:none; display:inline-block; margin-left:5px; margin-right:10px; color:#000;}
+.logo{ float:left; height:60px; width:326px; clear:both; padding:5px 0px; }
+.top_ad{ float:right; height:70px; overflow:hidden;width:650px; line-height:70px; margin-left:12px; text-align:right; display:inline-block;}
+.home{background:url(images/home_a.png) no-repeat left center; padding-left:20px; }
+#top_nav{ margin:0px; padding:0px;}
+#top_nav li{ margin:0px; padding:0px;display:inline-block;float:right;position:relative;}
+#top_nav li a {display:block;position:relative;z-index:20;} 
+#top_nav li:hover a{ color:#990000; }
+#top_nav li.hover a{border:1px solid #dfdfdf;border-bottom:none;background-color:#fff; }
+#top_nav li.hover{margin:-1px -1px 0 -1px;}
+#top_nav li.hover i {height: 0;font-size: 0; line-height: 0; border-style: solid; border-width: 0px 5px 5px 5px; border-color: #ccc transparent; margin-left:2px;display:inline-block; }  
+.jq_hidebox{display:none;position:absolute;right:10px;top:24px; width:350px; height:150px;text-align:left; padding:10px; border:1px solid #dfdfdf;box-shadow:0 1px 2px #ccc;background:#fff;z-index:10;}
+.logout{background:url(images/logout_a.png) no-repeat left center; padding-left:18px; }
+.user{background:url(images/user.png) no-repeat 5px 5px; padding-left:25px; padding-right:5px; } 
+.help{background:url(images/help3.png) no-repeat 5px 3px; padding-left:25px; padding-right:5px; } 
+.message{background:url(images/notice.png) no-repeat left center; padding-left:18px;  } 
+
+#navigation {height: 62px;width: 998px; margin-bottom:6px;}
+.nav_links ul {	margin: 0px;padding: 0px;}
+.nav_links li {	list-style:none;display:block;font-size: 14px;float: left;}
+.nav_links a {text-decoration: none;color: #990000;	display: block;	height: 40px;padding-top: 22px;padding-right: 27px;padding-left: 26px;}
+.nav_links a:hover {color: #FFFFFF;	background-image: url(images/hover.png);background-repeat: no-repeat;}
+.nav_links_on{color: #FFFFFF !important;background-image: url(images/hover.png);background-repeat: no-repeat;}
+.withdiv {background-image: url(images/divider.png);background-repeat: no-repeat;}
+.tblWrap{border:0px; background-color:#fff;}
+#databody_left{  width:198px;}
+#databody_right{  width:792px; }
+#footer{text-align:center; clear:both; border-top:1px solid #ccc;  padding:10px; line-height:25px; margin-top:10px;}
+.help_line{background:url(images/line.png) no-repeat left bottom; padding-bottom:5px; display:inline-block; clear:both;width:100%; text-align:left;}
+.help_line a{ border:0px !important;}
+.help_line ul{ margin:0px; padding:0px; display:inline-block; text-align:left;}
+.help_line li{ display:inline-block; line-height:24px; height:24px; background:url(images/pagination_icons) 15px 3px no-repeat; text-align:left !important; clear:both; float:left;width:100%;}
+.help_phone{ background:url(images/phone.png) no-repeat 5px 8px; padding-left:25px; height:30px; line-height:30px; text-align:left; float:right;width:120px; font-family:Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif; font-weight:bold; }
+.help_help{ background:url(images/help.png) no-repeat 5px 6px; padding-left:25px; height:30px; line-height:30px; text-align:left; float:left;width:150px; font-weight:bold; color:#990000; }
+
+.help_qq{ background:url(images/qq.png) no-repeat 5px 8px; padding-left:25px; height:30px; line-height:30px; text-align:left;  } 
+
+/***返回到顶部*/
+.backToTop { display: none; width: 20px;padding:5px 2px 5px 2px;text-align: center;position: fixed; _position: absolute;right: 1px;bottom: 30px; _bottom: "auto"; cursor: pointer; background-color:#DFF3FD; border:1px solid #ccc; color:#007BC4; cursor:pointer; }
+.backToTop:hover{ color:red;}
+.backToTop i{ background:url(images/top.png) no-repeat center top; display:inline-block; width:22px; height:16px; }
+/***面包屑*/
+.nav_break{ background:url(images/jobber_bj01.jpg) repeat-x; height:33px; }
+.nav_break_bottom{ background:url(images/menu_bg_1.gif) repeat-x bottom; height:31px; padding-bottom:2px; }
+.nav_break_bottom span{ background:url(images/pageicon.png) no-repeat 5px 6px; font-weight:bold; height:33px; display:inline-block; line-height:33px; padding-left:30px; }
+/********************布局 End **************************/
+
+/************左侧导航菜单******************/
+.nav a{ text-decoration:none; color:#000; } 
+.nav_title{background:url(images/teach_nav_tit.jpg) no-repeat; width:175px; height:21px; padding:12px 0px 0px 23px; font-family:Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif; font-size:13px; font-weight:bold; }
+
+.nav_item_group{ background:url(images/teach_menu1.png) no-repeat; width:198px; height:29px;line-height:29px; display:inline-block; }
+.nav_item_group > .sub-menu{ display:none;}
+.nav_item_group a{ padding-left:20px; width:178px; font-weight:bold;}
+.nav_item_group:hover{cursor:pointer;}  
+.nav_item_group_on{ background:url(images/teach_menu2.png) no-repeat; width:198px; display:inline-block; border-bottom:1px solid #FEE9C2;} 
+.nav_item_group_on > .sub-menu { display:block; background-color:#fff; margin-bottom:20px; }
+.nav_item_group_on > .sub-menu li{ line-height:30px; }
+.nav_item_group_on a{ padding-left:20px; width:178px; height:29px; line-height:29px; font-weight:bold;}
+.nav_item_group_on a em{ font-size:12px; color:#ccc; padding-right:10px; }
+.nav_item_group_on > .sub-menu a{ padding-left:20px; font-weight:normal; color:#670000; }
+.sub-menu li{ border-bottom:1px dashed #ccc; margin:0px 10px; background:url(images/bit06.gif) no-repeat left center;}  
+.sub-menu li:hover{ border-bottom:1px dotted #ccc; margin:0px 10px; background:url(images/red_arr.gif) no-repeat left center;} 
+.sub-menu li:hover a{color:red;}  
+/************End 左侧导航菜单******************/

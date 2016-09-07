@@ -1,0 +1,56 @@
+﻿.toolbar_right
+{
+    padding-left: 10px;
+}
+
+/*通知公告*/
+.myinfo_title
+{
+    display: inline-block;
+    padding: 4px 8px;
+}
+
+.myinfo_link a
+{
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration:underline;
+}
+/*通知公告*/
+.noticelist li
+{
+    height: 24px;
+    overflow: hidden;
+}
+
+.noticedate
+{
+    color: #ccc;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.rpt_bar
+{ 
+    border-bottom:2px solid #258CE3; margin-bottom:10px; height:25px;
+}
+    .rpt_bar a
+    {
+        display:inline-block; float:left;  font-family:微软雅黑; height:40px; font-size:16px; margin-right:20px; color:#000;
+        cursor:pointer;
+    }
+.rpt_bar_on
+{
+    font-size:20px; font-weight:bold; color:#258CE3 !important;
+}
+/*消息中心*/
+.message
+{
+    padding:0px;
+}
+.message li
+{ line-height:22px; 
+}
+    .message li span
+    { font-family:Arial; padding:0px 4px;
+    }

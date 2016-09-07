@@ -1,0 +1,105 @@
+﻿.r_title {
+    color: #eb940a;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.hiden {
+   display:none;
+}
+.r_summary {
+    margin: 0px;
+    padding: 0px;
+}
+
+    .r_summary li {
+        margin: 0px;
+        padding: 0px;
+        line-height: 24px;
+        list-style-type: none;
+    }
+
+        .r_summary li em {
+            font-style: normal;
+            font-size: 10px;
+        }
+
+    .r_summary span {
+        color: #e97f19;
+        font-size: 13px;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+.r_shared {
+    background: #138928 url(image/r_shared.png) no-repeat 5px 6px;
+    display: inline-block;
+    padding: 4px 8px 4px 26px;
+    color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.r_routeinfo {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+    clear: both;
+    margin: 10px 0px;
+}
+
+    .r_routeinfo ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .r_routeinfo_subject{
+        list-style-type: none;
+        display: block;
+        line-height: 35px;
+        border-bottom: 1px solid #ccc;
+        background: #000 url(image/bg-panel-header.gif) repeat-x;
+        height: 35px;
+        font-size: 13px;
+        font-weight:bold;
+        color:#4E4133; padding-left:10px;
+    }
+.r_routeinfo_c {
+ padding:10px; line-height:24px;
+}
+        
+.r_routeinfo_arrow_up {
+    display: inline-block;
+    float: right;
+    width: 18px;
+    height: 35px;
+    background: url(image/up.png) right center no-repeat;
+    margin-right: 5px;
+}
+
+.r_routeinfo_arrow_down {
+    display: inline-block;
+    float: right;
+    width: 18px;
+    height: 35px;
+    background: url(image/down.png) right center no-repeat;
+    margin-right: 5px;
+}
+.r_mobile {
+    background:#F1F4F9 url(image/service.png) no-repeat left center;
+    height: 65px; 
+    padding-left:20px;
+    line-height: 65px; 
+    text-align:center; 
+  
+}
+    .r_mobile a {
+     color:#e97f19;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    text-align: center;
+    }

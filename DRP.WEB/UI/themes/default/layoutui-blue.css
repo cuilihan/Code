@@ -1,0 +1,137 @@
+﻿.rolelist{ margin-top: 10px; line-height:24px;}
+.rolelist a{display:inline-block; margin-right:15px;}
+
+/*表格样式*/ 
+.rowlabel{width:120px; text-align:right; background-color:#F1F6FF;}
+.rowlabel_100{width:100px; text-align:right;background-color:#F1F6FF;}
+.rowlabel_90{width:90px; text-align:right;background-color:#F1F6FF}
+
+.tblInfo{ width:100%; background-color:#95B8E7;border-spacing:1px; font-size:12px; }
+.tblInfo tr{ background-color:#fff; height:26px;}
+.tblInfo th{ background-color:#F1F1FF; height:26px; text-align:center;}
+.tblInfo td{ padding:5px;height:25px; line-height:25px; }
+
+.tblEdit{ width:100%; background-color:#95B8E7;border-spacing:1px; font-size:12px;}
+.tblEdit tr{ background-color:#fff;}
+.tblEdit th{ background-color:#F1F1FF; height:26px; text-align:center;}
+.tblEdit td{ padding:5px;height:25px; line-height:25px; }
+#pnlContainer{ padding:10px;} 
+.formedit{  }
+.formedit .tblwrap{border: 1px solid #696;margin:0 auto; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;-webkit-box-shadow: #666 0px 0px 10px;-moz-box-shadow: #666 0px 0px 10px;box-shadow: #666 0px 0px 10px;background: #fff;behavior: url(/PIE.htc); }
+.tblItem{border:0px; width:100%; font-size:12px; border-spacing:1px; background-color:#9CB8E7; }
+.tblItem th{ background-color:#F1F1FF; height:26px; line-height:26px;}
+.tblItem td{ height:26px; line-height:26px; padding:5px;}
+.tblItem tr{ background-color:#fff; }
+
+
+/************页面布局 Begin******************/
+#layout_top{ background-color:#25A6DE; z-index:1;}
+.layout_top_logo{height:25px; line-height:25px; float:left;color:#fff; font-size:15px; font-weight:bold; font-family:微软雅黑; padding-left: 10px; }
+.layout_top_search {float:right; height:25px; line-height:26px; padding-right:20px; }
+.layout_top_toolbar{height:25px; float:right;text-align:right; padding-top:3px;width:460px;  }
+.layout_top_toolbar li{ float:right; margin-right:10px; cursor:pointer;height:22px;position:relative;} 
+.layout_top_toolbar li a {display:block;position:relative;z-index:20; color:#fff;} 
+.layout_top_toolbar li.hover{ margin-right:10px;}
+.layout_top_toolbar li.hover a{ z-index:200;  color:red; text-align:center; padding-top:4px; background-color:#fff; }
+.layout_top_toolbar li.hover i{height: 0;font-size: 0; line-height: 0; border-style: solid; border-width: 0px 5px 5px 5px; border-color: #ccc transparent; margin-left:2px;display:inline-block; }
+.jq_hidebox {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    left: 0px;
+    top: 18px;
+    zoom: 1;
+    width: 410px;
+    height: 55px;
+    text-align: left;
+    padding: 5px 10px;
+    -moz-box-shadow: 0 1px 2px #ccc;
+    -webkit-box-shadow: 0 1px 2px #ccc;
+    box-shadow: 0 1px 2px #ccc;
+    z-index: 100;
+    overflow: hidden;
+}
+.jq_hidebox a{ border:0px; float:left; padding:0px; margin:2px 5px; display:inline-block; }
+.skin_hidebox {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    top: 18px;
+    zoom: 1;
+    width: 90px;
+    height: 50px;
+    text-align: left;
+    padding: 5px 10px;
+    -moz-box-shadow: 0 1px 2px #ccc;
+    -webkit-box-shadow: 0 1px 2px #ccc;
+    box-shadow: 0 1px 2px #ccc;
+    z-index: 100;
+    overflow: hidden;
+} 
+.skin_hidebox a{ border:0px; float:left; padding:0px; font-weight:normal; margin:2px 5px; display:inline-block; }
+#layout_menu_bg{background:url(images/grad-overlay.png) repeat-x;z-index:2; height:62px; overflow:hidden; background-color:#25A6DE;}
+.layout_menu_user{ float:left;width:181px; height:62px;}
+.layout_menu_user_info{background:url(images/login_user2.png) no-repeat left center; width:130px; height:50px; line-height:19px; color:#fff;padding:12px 0px 0px 40px;}
+
+.layout_menu_user_info a{ text-decoration:none; color:#fff;}
+.layout_menu_user_info span{ font-family:Arial; display:inline-block; padding-top:2px; }
+.layout_menu_user_msg{ background:url(images/tallnew.png) no-repeat 1px -17px;display:inline-block; height:22px; width:36px; }
+.layout_menu_user_msg i{ background:url(images/tallnew.png) no-repeat -1px 0px;display:inline-block; height:16px; width:10px; }
+ 
+.layout_menu_right{float:left; height:62px; overflow:hidden; z-index:300; }
+.layout_menu_nav{float:left; position:relative; height:62px;overflow:hidden;z-index:1;}
+.navRollWrap{ display:inline-block;position:absolute; z-index:2; }
+
+.layout_menu_nav li{ display:inline-block; float:left;width:80px; height:62px; }
+.layout_menu_nav_on{ background-color:#3178b7; }
+.layout_menu_nav li:hover{ background-color:#3178b7; cursor:pointer; } 
+.layout_menu_nav li a{color:#fff; display:inline-block; text-decoration:none; text-align:center; width:80px; padding-top:40px; height:22px;}
+
+.layout_menu_nav_btn_l {display:inline-block; background:url(images/arrow_l.png) no-repeat center; text-align: center;width: 30px; height:62px; float:left; cursor:pointer; }
+.layout_menu_nav_btn_r {display:inline-block; background:url(images/arrow_r.png) no-repeat center; text-align: center;width: 30px; height:62px; float:right; cursor:pointer; }
+.customer{background:url(images/customer.png) no-repeat 32px 10px; }
+.resource{background:url(images/resource.png) no-repeat 32px 10px; }
+.finance{background:url(images/finance.png) no-repeat 32px 10px; }
+.system{background:url(images/system.png) no-repeat 32px 10px; }
+.product{background:url(images/product.png) no-repeat 32px 10px; }
+.sales{background:url(images/sales.png) no-repeat 32px 10px; }
+.op{background:url(images/op.png) no-repeat 32px 10px; }
+.report{background:url(images/rpt.png) no-repeat 32px 10px; }
+.manager{background:url(images/manager.png) no-repeat 32px 10px; }
+.quotation{background:url(images/template.png) no-repeat 32px 10px; }
+.home{background:url(images/pHome.png) no-repeat 32px 10px; }
+.drp_left_menu{overflow: auto; background-color:#F1F6FF !important; clear: both;}
+#navigate {background-color: #F1F6FF;}
+.navigate_left li{ background:url(images/itembg.jpg) no-repeat bottom; height:39px; line-height:39px; float:none !important; padding-left:20px;  }
+.navigate_left li span{ font-family:Arial; display:inline-block; margin-right:10px; }
+.navigate_left li a:hover{ color:red; }
+.navigate_left_li_on{color:red !important;}
+.nav_default{text-decoration:none; color:#000; background:url(images/nav_2.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_customer{text-decoration:none; color:#000; background:url(images/nav_customer.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_setting{text-decoration:none; color:#000; background:url(images/nav_setting.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_order{text-decoration:none; color:#000; background:url(images/nav_olist.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_invoice{text-decoration:none; color:#000; background:url(images/nav_invoice.png) no-repeat left center; display:inline-block; padding-left:20px;} 
+.nav_income{text-decoration:none; color:#000; background:url(images/nav_income.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_pay{text-decoration:none; color:#000; background:url(images/nav_pay.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_add{text-decoration:none; color:#000; background:url(images/nav_add.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_subtract{text-decoration:none; color:#000; background:url(images/nav_subtract.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_line_rpt{text-decoration:none; color:#000; background:url(images/nav_line_rpt.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_rpt_tbl{text-decoration:none; color:#000; background:url(images/nav_rpt_tbl.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_nav{text-decoration:none; color:#000; background:url(images/nav_nav.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_dept{text-decoration:none; color:#000; background:url(images/nav_dept.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_org{text-decoration:none; color:#000; background:url(images/nav_org.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_user{text-decoration:none; color:#000; background:url(images/nav_user.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_info{text-decoration:none; color:#000; background:url(images/nav_info.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_dir{text-decoration:none; color:#000; background:url(images/nav_dir.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_query{text-decoration:none; color:#000; background:url(images/nav_query.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_venue{text-decoration:none; color:#000; background:url(images/nav_venue.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_list{text-decoration:none; color:#000; background:url(images/nav_list.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_permission{text-decoration:none; color:#000; background:url(images/nav_permission.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_role{text-decoration:none; color:#000; background:url(images/nav_roles.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_message{text-decoration:none; color:#000; background:url(images/nav_message.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_mobile{text-decoration:none; color:#000; background:url(images/mobile.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_ticket{text-decoration:none; color:#000; background:url(images/nav_ticket.png) no-repeat left center; display:inline-block; padding-left:20px;} 
+.nav_audit{text-decoration:none; color:#000; background:url(images/nav_audit.png) no-repeat left center; display:inline-block; padding-left:20px;}
+.nav_wechat{text-decoration:none; color:#000; background:url(images/nav_wechat.png) no-repeat left center; display:inline-block; padding-left:20px;} 
+/************页面布局 end******************/

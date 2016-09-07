@@ -1,0 +1,3745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9740C0A9-29F5-4709-9A6E-51AF05D4E1D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRP.WEB</RootNamespace>
+    <AssemblyName>DRP.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>true</PublishDatabases>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DocX">
+      <HintPath>..\DRP.Library\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="DRP.Cached, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\DRP.Cached.dll</HintPath>
+    </Reference>
+    <Reference Include="DRP.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\DRP.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\DRP.Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="org.in2bits.MyXls, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\org.in2bits.MyXls.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=1.0.4198.20620, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.4198.20619, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=2.2.0.20691, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=2.2.6.20579, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic.Core, Version=3.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DRP.Library\SubSonic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\DRP.Library\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiTest.aspx" />
+    <Content Include="App_Themes\Default\Default.Css" />
+    <Content Include="App_Themes\Default\Images\check.png" />
+    <Content Include="App_Themes\Default\Images\destinaion.png" />
+    <Content Include="App_Themes\Default\Images\grid.png" />
+    <Content Include="App_Themes\Default\Images\hand.png" />
+    <Content Include="App_Themes\Default\Images\icon06.gif" />
+    <Content Include="App_Themes\Default\Images\icon07.gif" />
+    <Content Include="App_Themes\Default\Images\icon08.gif" />
+    <Content Include="App_Themes\Default\Images\line04.gif" />
+    <Content Include="App_Themes\Default\Images\list.png" />
+    <Content Include="App_Themes\Default\Images\logo-help.png" />
+    <Content Include="App_Themes\Default\Images\logo.png" />
+    <Content Include="App_Themes\Default\Images\new.gif" />
+    <Content Include="App_Themes\Default\Images\o_ibread.png" />
+    <Content Include="App_Themes\Default\Images\panel_001.gif" />
+    <Content Include="App_Themes\Default\Images\panel_002.gif" />
+    <Content Include="App_Themes\Default\Images\point.gif" />
+    <Content Include="App_Themes\Default\Images\question.png" />
+    <Content Include="App_Themes\Default\Images\question_32.png" />
+    <Content Include="App_Themes\Default\Images\sad.png" />
+    <Content Include="App_Themes\Default\Images\tile.png" />
+    <Content Include="App_Themes\Default\Images\toleft.png" />
+    <Content Include="App_Themes\Default\Images\toleftall.png" />
+    <Content Include="App_Themes\Default\Images\toright.png" />
+    <Content Include="App_Themes\Default\Images\torightall.png" />
+    <Content Include="Down\Chrome.exe" />
+    <Content Include="Down\IE8-WindowsXP-x86-CHS.exe" />
+    <Content Include="Down\IE9-Windows7-x86-chs.exe" />
+    <Content Include="Error.aspx" />
+    <Content Include="Files\eShop\ReadMe.txt" />
+    <Content Include="Files\Log\201412\20141212.txt" />
+    <Content Include="Files\Log\201412\20141216.txt" />
+    <Content Include="Files\Log\201412\20141217.txt" />
+    <Content Include="Files\Log\201412\20141231.txt" />
+    <Content Include="Files\Log\201501\20150119.txt" />
+    <Content Include="Files\Log\201501\20150121.txt" />
+    <Content Include="Files\Log\201502\20150202.txt" />
+    <Content Include="Files\Log\201503\20150324.txt" />
+    <Content Include="Files\Resource\code.jpg" />
+    <Content Include="Files\Upload\12.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Module\CheckAccount\CheckAccount.css" />
+    <Content Include="Module\CheckAccount\Index.aspx" />
+    <Content Include="Module\CheckAccount\Logout.aspx" />
+    <Content Include="Module\CheckAccount\OrderSelect.aspx" />
+    <Content Include="Module\CheckAccount\Script\BalanceAccount.js" />
+    <Content Include="Module\CheckAccount\ViewBill.aspx" />
+    <Content Include="Module\CheckIn\IncomeInfo.aspx" />
+    <Content Include="Module\CheckIn\IncomeSign.aspx" />
+    <Content Include="Module\CheckIn\IncomeSignEdit.aspx" />
+    <Content Include="Module\CheckIn\PayableSign.aspx" />
+    <Content Include="Module\CheckIn\PayInfo.aspx" />
+    <Content Include="Module\CheckIn\PaySignEdit.aspx" />
+    <Content Include="Module\CheckIn\Script\IncomeSign.js" />
+    <Content Include="Module\CheckIn\Script\PaySign.js" />
+    <Content Include="Module\Crm\BirthDay.aspx" />
+    <Content Include="Module\Crm\Customer.aspx" />
+    <Content Include="Module\Crm\CustomerEdit.aspx" />
+    <Content Include="Module\Crm\CustomerImp.aspx" />
+    <Content Include="Module\Crm\CustomerInfo.aspx" />
+    <Content Include="Module\Crm\CustomerVisit.aspx" />
+    <Content Include="Module\Crm\Prospect.aspx" />
+    <Content Include="Module\Crm\Script\Customer.js" />
+    <Content Include="Module\Crm\Script\CustomerEdit.js" />
+    <Content Include="Module\Crm\Script\CustomerInfo.js" />
+    <Content Include="Module\Crm\Script\CustomerVisit.js" />
+    <Content Include="Module\Crm\Script\TradeOrder.js" />
+    <Content Include="Module\Crm\Script\SelectedCustomer.js" />
+    <Content Include="Module\Crm\Script\CustomerBirthDay.js" />
+    <Content Include="Module\Crm\SelectCustomer.aspx" />
+    <Content Include="Module\Crm\TraceEdit.aspx" />
+    <Content Include="Module\Crm\TradeOrder.aspx" />
+    <Content Include="Module\Fin\BizOrderList.aspx" />
+    <Content Include="Module\Fin\CollectedItem.aspx" />
+    <Content Include="Module\Fin\CollectedItemImport.aspx" />
+    <Content Include="Module\Fin\CollectItemEdit.aspx" />
+    <Content Include="Module\Fin\CreateInvoice.aspx" />
+    <Content Include="Module\Fin\DrawMoney.aspx" />
+    <Content Include="Module\Fin\InvoiceMrg.aspx" />
+    <Content Include="Module\Fin\InvoiceOp.aspx" />
+    <Content Include="Module\Fin\OrderBudgetFinal.aspx" />
+    <Content Include="Module\Fin\OrderCollected.aspx" />
+    <Content Include="Module\Fin\OrderDate.aspx" />
+    <Content Include="Module\Fin\OrderList.aspx" />
+    <Content Include="Module\Fin\PaidInvoice.aspx" />
+    <Content Include="Module\Fin\PaidInvoiceEdit.aspx" />
+    <Content Include="Module\Fin\PaidItem.aspx" />
+    <Content Include="Module\Fin\Payable.aspx" />
+    <Content Include="Module\Fin\PayableAction.aspx" />
+    <Content Include="Module\Fin\PayableItem.aspx" />
+    <Content Include="Module\Fin\Script\OrderFinalBudget.js" />
+    <Content Include="Module\Fin\Script\OrderList.js" />
+    <Content Include="Module\Fin\Script\PaidInvoice.js" />
+    <Content Include="Module\Fin\Script\CollectedItem.js" />
+    <Content Include="Module\Fin\Script\InvoiceMrg.js" />
+    <Content Include="Module\Fin\Script\DrawMoney.js" />
+    <Content Include="Module\Fin\Script\BizOrderList.js" />
+    <Content Include="Module\Fin\Script\OrderCollected.js" />
+    <Content Include="Module\Fin\Script\PayableAction.js" />
+    <Content Include="Module\Fin\Script\TeamOrderList.js" />
+    <Content Include="Module\Fin\Script\TicketOrderList.js" />
+    <Content Include="Module\Fin\Script\TourOrderList.js" />
+    <Content Include="Module\Fin\Script\BalanceSettlement.js" />
+    <Content Include="Module\Fin\SettlementAction.aspx" />
+    <Content Include="Module\Fin\SettlementBill.aspx" />
+    <Content Include="Module\Fin\TicketOrder.aspx" />
+    <Content Include="Module\Guide\Help.aspx" />
+    <Content Include="Module\Guide\Script\UpdateLog.js" />
+    <Content Include="Module\Guide\UpdateLog.aspx" />
+    <Content Include="Module\Initial\Init.css" />
+    <Content Include="Module\Initial\InitConfig.aspx" />
+    <Content Include="Module\Initial\Script\Init.js" />
+    <Content Include="Module\mSite\Script\SiteSetting.js" />
+    <Content Include="Module\mSite\SiteSetting.aspx" />
+    <Content Include="Module\My\MyInfo.aspx" />
+    <Content Include="Module\My\MySms.aspx" />
+    <Content Include="Module\My\Script\Message.js" />
+    <Content Include="Module\My\Script\MySms.js" />
+    <Content Include="Module\My\SendSms.aspx" />
+    <Content Include="Module\My\SmsView.aspx" />
+    <Content Include="Module\Fin\BalanceSettlement.aspx" />
+    <Content Include="Module\Om\OmReceivable.aspx" />
+    <Content Include="Module\Om\OrgOrderRpt.aspx" />
+    <Content Include="Module\Om\OrgSetting.aspx" />
+    <Content Include="Module\Om\PricePolicy.aspx" />
+    <Content Include="Module\Om\PushMessage.aspx" />
+    <Content Include="Module\Om\PushNotice.aspx" />
+    <Content Include="Module\Om\PushNoticeEdit.aspx" />
+    <Content Include="Module\Om\QQ.aspx" />
+    <Content Include="Module\Om\QQEdit.aspx" />
+    <Content Include="Module\Om\QRCode.aspx" />
+    <Content Include="Module\Om\QuantityRpt.aspx" />
+    <Content Include="Module\Om\Receipt.aspx" />
+    <Content Include="Module\Om\ReceiptItem.aspx" />
+    <Content Include="Module\Om\ReceiptRpt.aspx" />
+    <Content Include="Module\Om\Script\OmReceivable.js" />
+    <Content Include="Module\Om\Script\PricePolicy.js" />
+    <Content Include="Module\Om\Script\QQ.js" />
+    <Content Include="Module\Om\Script\UpdateLog.js" />
+    <Content Include="Module\Om\Script\ReceiptItem.js" />
+    <Content Include="Module\Om\Script\OmPushNotice.js" />
+    <Content Include="Module\Om\SmsBalance.aspx" />
+    <Content Include="Module\Om\SmsRpt.aspx" />
+    <Content Include="Module\Om\SmsSetting.aspx" />
+    <Content Include="Module\Om\SmsSettingEdit.aspx" />
+    <Content Include="Module\Om\UpdateLog.aspx" />
+    <Content Include="Module\Om\UpdateLogEdit.aspx" />
+    <Content Include="Module\Order\BudgetBill.aspx" />
+    <Content Include="Module\Order\CollectedSign.aspx" />
+    <Content Include="Module\Order\OrderAudit.aspx" />
+    <Content Include="Module\Order\OrderAuditAction.aspx" />
+    <Content Include="Module\Order\OrderBudgetFinal.aspx" />
+    <Content Include="Module\Order\OrderCheckAccount.aspx" />
+    <Content Include="Module\Order\OrderCheckAcctBill.aspx" />
+    <Content Include="Module\Order\OrderZZB.aspx" />
+    <Content Include="Module\Order\Script\OrderFinalBudget.js" />
+    <Content Include="Module\Order\Script\OrderZZB.js" />
+    <Content Include="Module\Order\Script\TicketOrderList.js" />
+    <Content Include="Module\Order\Script\TicketOrderEdit.js" />
+    <Content Include="Module\Order\Script\OrderAudit.js" />
+    <Content Include="Module\Order\TeamOrderInfo.aspx" />
+    <Content Include="Module\Order\TicetOrderInfo.aspx" />
+    <Content Include="Module\Order\TicketOrder.aspx" />
+    <Content Include="Module\Order\TicketOrderEdit.aspx" />
+    <Content Include="Module\Order\tOrderInfo.aspx" />
+    <Content Include="Module\Order\TourOrderInfo.aspx" />
+    <Content Include="Module\Order\zOrderInfo.aspx" />
+    <Content Include="Module\Pro\OccupySeat.aspx" />
+    <Content Include="Module\Pro\Script\TourEdit.js" />
+    <Content Include="Module\Pro\TourEdit.aspx" />
+    <Content Include="Module\Rpt\BizRpt.aspx" />
+    <Content Include="Module\Rpt\OrderSheet.aspx" />
+    <Content Include="Module\Rpt\Script\BizRpt.js" />
+    <Content Include="Module\Rpt\Script\SupplierPayable.js" />
+    <Content Include="Module\Fin\Script\PaidItem.js" />
+    <Content Include="Module\Fin\Script\PayableItem.js" />
+    <Content Include="Module\Fin\TeamOrderList.aspx" />
+    <Content Include="Module\Fin\TourOrderList.aspx" />
+    <Content Include="Module\Glo\BasicInfo.aspx" />
+    <Content Include="Module\Glo\BasicInfoEdit.aspx" />
+    <Content Include="Module\Glo\Departure.aspx" />
+    <Content Include="Module\Glo\DepartureEdit.aspx" />
+    <Content Include="Module\Glo\Destination.aspx" />
+    <Content Include="Module\Glo\DestinationEdit.aspx" />
+    <Content Include="Module\Glo\NoticeEdit.aspx" />
+    <Content Include="Module\Glo\NoticeInfo.aspx" />
+    <Content Include="Module\Glo\NoticeList.aspx" />
+    <Content Include="Module\Glo\NoticeMrg.aspx" />
+    <Content Include="Module\Glo\Script\BasicInfo.js" />
+    <Content Include="Module\Glo\Script\Departure.js" />
+    <Content Include="Module\Glo\Script\Destination.js" />
+    <Content Include="Module\Glo\Script\NoticeMrg.js" />
+    <Content Include="Module\Glo\Script\NoticeList.js" />
+    <Content Include="Module\Guide\Index.aspx" />
+    <Content Include="Module\Guide\Index.css" />
+    <Content Include="Module\Guide\Script\Index.js" />
+    <Content Include="Module\My\Favorites.aspx" />
+    <Content Include="Module\My\FavoritesEdit.aspx" />
+    <Content Include="Module\My\MyMessage.aspx" />
+    <Content Include="Module\My\MyPasswrod.aspx" />
+    <Content Include="Module\My\Script\Favorites.js" />
+    <Content Include="Module\My\Settings.aspx" />
+    <Content Include="Module\Om\Cache.aspx" />
+    <Content Include="Module\Om\NavGroup.aspx" />
+    <Content Include="Module\Om\NavGroupEdit.aspx" />
+    <Content Include="Module\Om\Navigate.aspx" />
+    <Content Include="Module\Om\NavigateEdit.aspx" />
+    <Content Include="Module\Om\OmArea.aspx" />
+    <Content Include="Module\Om\OmAreaEdit.aspx" />
+    <Content Include="Module\Om\OmUser.aspx" />
+    <Content Include="Module\Om\OmUserEdit.aspx" />
+    <Content Include="Module\Om\OnLineRpt.aspx" />
+    <Content Include="Module\Om\OrgAdmin.aspx" />
+    <Content Include="Module\Om\OrgInfo.aspx" />
+    <Content Include="Module\Om\OrgInfoEdit.aspx" />
+    <Content Include="Module\Om\Script\NavGroupEdit.js" />
+    <Content Include="Module\Om\Script\Navigate.js" />
+    <Content Include="Module\Om\Script\OmUser.js" />
+    <Content Include="Module\Om\Script\NavGroup.js" />
+    <Content Include="Module\Om\Script\OnLineRpt.js" />
+    <Content Include="Module\Om\Script\OrgInfo.js" />
+    <Content Include="Module\Om\Script\OmArea.js" />
+    <Content Include="Module\Om\Script\ToolSetting.js" />
+    <Content Include="Module\Om\ToolSetting.aspx" />
+    <Content Include="Module\Om\ToolSettingEdit.aspx" />
+    <Content Include="Module\Om\UserRpt.aspx" />
+    <Content Include="Module\Order\BizOrderInfo.aspx" />
+    <Content Include="Module\Order\CollectedClaim.aspx" />
+    <Content Include="Module\Order\InvoiceInfo.aspx" />
+    <Content Include="Module\Order\InvoiceOrderItem.aspx" />
+    <Content Include="Module\Order\OrderBiz.aspx" />
+    <Content Include="Module\Order\OrderBudget.aspx" />
+    <Content Include="Module\Order\OrderClaim.aspx" />
+    <Content Include="Module\Order\OrderCollected.aspx" />
+    <Content Include="Module\Order\OrderGuide.aspx" />
+    <Content Include="Module\Order\OrderInvoice.aspx" />
+    <Content Include="Module\Order\OrderQYT.aspx" />
+    <Content Include="Module\Order\OrderTHSK.aspx" />
+    <Content Include="Module\Order\PaidInvoice.aspx" />
+    <Content Include="Module\Order\Script\OrderCollected.js" />
+    <Content Include="Module\Order\Script\OrderGuide.js" />
+    <Content Include="Module\Order\Script\OrderInvoice.js" />
+    <Content Include="Module\Order\Script\OrderList.js" />
+    <Content Include="Module\Order\Script\OrderTHSK.js" />
+    <Content Include="Module\Order\Script\OrderUtility.js" />
+    <Content Include="Module\Order\Script\PaidInvoice.js" />
+    <Content Include="Module\Order\Script\SingleBiz.js" />
+    <Content Include="Module\Order\Script\TourOrderList.js" />
+    <Content Include="Module\Order\Script\TeamOrderList.js" />
+    <Content Include="Module\Order\Script\OrderBiz.js" />
+    <Content Include="Module\Order\Script\OrderQYT.js" />
+    <Content Include="Module\Order\Script\OrderBudget.js" />
+    <Content Include="Module\Order\Script\InvoiceQry.js" />
+    <Content Include="Module\Order\Script\CollectedClaim.js" />
+    <Content Include="Module\Order\Script\OrderClaim.js" />
+    <Content Include="Module\Order\sTourNotice.aspx" />
+    <Content Include="Module\Order\TeamOrderList.aspx" />
+    <Content Include="Module\Order\TourNotice.aspx" />
+    <Content Include="Module\Order\TourOrders.aspx" />
+    <Content Include="Module\Order\zTourNotice.aspx" />
+    <Content Include="Module\Pro\Css\btnBook.jpg" />
+    <Content Include="Module\Pro\Css\bus.png" />
+    <Content Include="Module\Pro\Css\locked.png" />
+    <Content Include="Module\Pro\Css\seat.png" />
+    <Content Include="Module\Pro\Css\toptrbg.gif" />
+    <Content Include="Module\Pro\Css\zz.png" />
+    <Content Include="Module\Pro\OpenTour.aspx" />
+    <Content Include="Module\Pro\ProBook.aspx" />
+    <Content Include="Module\Pro\Css\ProBook.css" />
+    <Content Include="Module\Pro\ProList.aspx" />
+    <Content Include="Module\Pro\ProNav.aspx" />
+    <Content Include="Module\Pro\RouteEdit.aspx" />
+    <Content Include="Module\Pro\RouteInfo.aspx" />
+    <Content Include="Module\Pro\RouteMrg.aspx" />
+    <Content Include="Module\Pro\Script\CreateTour.js" />
+    <Content Include="Module\Pro\Script\ProBook.js" />
+    <Content Include="Module\Pro\Script\ProList.js" />
+    <Content Include="Module\Pro\Script\ProNav.js" />
+    <Content Include="Module\Pro\Script\RouteInfo.js" />
+    <Content Include="Module\Pro\Script\RouteEdit.js" />
+    <Content Include="Module\Pro\Script\RouteMgmt.js" />
+    <Content Include="Module\Pro\Script\Venue.js" />
+    <Content Include="Module\Pro\Script\TourList.js" />
+    <Content Include="Module\Pro\Success.aspx" />
+    <Content Include="Module\Pro\TourList.aspx" />
+    <Content Include="Module\Pro\Venue.aspx" />
+    <Content Include="Module\Pro\VenueEdit.aspx" />
+    <Content Include="Module\Res\Guide.aspx" />
+    <Content Include="Module\Res\GuideEdit.aspx" />
+    <Content Include="Module\Res\GuideInfo.aspx" />
+    <Content Include="Module\Res\GuideQry.aspx" />
+    <Content Include="Module\Res\GuideTile.aspx" />
+    <Content Include="Module\Res\Hotel.aspx" />
+    <Content Include="Module\Res\HotelEdit.aspx" />
+    <Content Include="Module\Res\HotelInfo.aspx" />
+    <Content Include="Module\Res\HotelQry.aspx" />
+    <Content Include="Module\Res\HotelTile.aspx" />
+    <Content Include="Module\Res\Insurer.aspx" />
+    <Content Include="Module\Res\InsurerEdit.aspx" />
+    <Content Include="Module\Res\InsurerInfo.aspx" />
+    <Content Include="Module\Res\InsurerQry.aspx" />
+    <Content Include="Module\Res\Motorcade.aspx" />
+    <Content Include="Module\Res\MotorcadeEdit.aspx" />
+    <Content Include="Module\Res\MotorcadeInfo.aspx" />
+    <Content Include="Module\Res\MotorcadeQry.aspx" />
+    <Content Include="Module\Res\OtherRes.aspx" />
+    <Content Include="Module\Res\OtherResEdit.aspx" />
+    <Content Include="Module\Res\OtherResInfo.aspx" />
+    <Content Include="Module\Res\OtherResQry.aspx" />
+    <Content Include="Module\Res\ScenicSpot.aspx" />
+    <Content Include="Module\Res\ScenicSpotEdit.aspx" />
+    <Content Include="Module\Res\ScenicSpotInfo.aspx" />
+    <Content Include="Module\Res\ScenicSpotQry.aspx" />
+    <Content Include="Module\Res\ScenicSpotTile.aspx" />
+    <Content Include="Module\Res\Script\Hotel.js" />
+    <Content Include="Module\Res\Script\HotelEdit.js" />
+    <Content Include="Module\Res\Script\Insurer.js" />
+    <Content Include="Module\Res\Script\InsurerEdit.js" />
+    <Content Include="Module\Res\Script\Motorcade.js" />
+    <Content Include="Module\Res\Script\MotorcadeEdit.js" />
+    <Content Include="Module\Res\Script\Other.js" />
+    <Content Include="Module\Res\Script\OtherEdit.js" />
+    <Content Include="Module\Res\Script\TicketEdit.js" />
+    <Content Include="Module\Res\Script\TradeOrder.js" />
+    <Content Include="Module\Res\Script\TravelAgencyEdit.js" />
+    <Content Include="Module\Res\Script\ResourceUtility.js" />
+    <Content Include="Module\Res\Script\TravalAgency.js" />
+    <Content Include="Module\Res\Script\Guide.js" />
+    <Content Include="Module\Res\Script\Visa.js" />
+    <Content Include="Module\Res\Script\VisaEdit.js" />
+    <Content Include="Module\Res\Script\Ticket.js" />
+    <Content Include="Module\Res\Script\Shopping.js" />
+    <Content Include="Module\Res\Script\ShoppingEdit.js" />
+    <Content Include="Module\Res\Script\ScenicSpot.js" />
+    <Content Include="Module\Res\Script\ScenicSpotEdit.js" />
+    <Content Include="Module\Res\Script\TravalAgencyQry.js" />
+    <Content Include="Module\Res\Script\GuideQry.js" />
+    <Content Include="Module\Res\Script\HotelQry.js" />
+    <Content Include="Module\Res\Script\InsurerQry.js" />
+    <Content Include="Module\Res\Script\MotorcadeQry.js" />
+    <Content Include="Module\Res\Script\OtherQry.js" />
+    <Content Include="Module\Res\Script\ScenicSpotQry.js" />
+    <Content Include="Module\Res\Script\ShoppingQry.js" />
+    <Content Include="Module\Res\Script\TicketQry.js" />
+    <Content Include="Module\Res\Script\VisaQry.js" />
+    <Content Include="Module\Res\Script\TravalAgencyTile.js" />
+    <Content Include="Module\Res\Script\ScenicSpotTile.js" />
+    <Content Include="Module\Res\Script\HotelTile.js" />
+    <Content Include="Module\Res\Script\GuideTile.js" />
+    <Content Include="Module\Res\Script\GuideSelected.js" />
+    <Content Include="Module\Res\SelectGuide.aspx" />
+    <Content Include="Module\Res\Shopping.aspx" />
+    <Content Include="Module\Res\ShoppingEdit.aspx" />
+    <Content Include="Module\Res\ShoppingInfo.aspx" />
+    <Content Include="Module\Res\ShoppingQry.aspx" />
+    <Content Include="Module\Res\Ticket.aspx" />
+    <Content Include="Module\Res\TicketEdit.aspx" />
+    <Content Include="Module\Res\TicketInfo.aspx" />
+    <Content Include="Module\Res\TicketQry.aspx" />
+    <Content Include="Module\Res\TradeOrder.aspx" />
+    <Content Include="Module\Res\TravalAgencyEdit.aspx" />
+    <Content Include="Module\Res\TravelAgency.aspx" />
+    <Content Include="Module\Res\TravelAgencyInfo.aspx" />
+    <Content Include="Module\Res\TravelAgencyQry.aspx" />
+    <Content Include="Module\Res\TravelAgencyTile.aspx" />
+    <Content Include="Module\Res\Visa.aspx" />
+    <Content Include="Module\Res\VisaEdit.aspx" />
+    <Content Include="Module\Res\VisaInfo.aspx" />
+    <Content Include="Module\Res\VisaQry.aspx" />
+    <Content Include="Module\Order\InvoiceQry.aspx" />
+    <Content Include="Module\Order\OrderList.aspx" />
+    <Content Include="Module\Order\SingleBiz.aspx" />
+    <Content Include="Module\Rpt\CustomerRate.aspx" />
+    <Content Include="Module\Rpt\DeptProfit.aspx" />
+    <Content Include="Module\Rpt\Income.aspx" />
+    <Content Include="Module\Rpt\IncomeCheckIn.aspx" />
+    <Content Include="Module\Rpt\OrderQuantity.aspx" />
+    <Content Include="Module\Rpt\OrderSource.aspx" />
+    <Content Include="Module\Rpt\PaidItem.aspx" />
+    <Content Include="Module\Rpt\PayCheckIn.aspx" />
+    <Content Include="Module\Fin\Script\Payable.js" />
+    <Content Include="Module\Rpt\Script\PayCheckIn.js" />
+    <Content Include="Module\Rpt\Script\RptUtility.js" />
+    <Content Include="Module\Rpt\Script\IncomeCheckIn.js" />
+    <Content Include="Module\Rpt\Script\OrderSource.js" />
+    <Content Include="Module\Rpt\Script\CustomerRate.js" />
+    <Content Include="Module\Rpt\Script\OrderQuantity.js" />
+    <Content Include="Module\Rpt\Script\RptIncome.js" />
+    <Content Include="Module\Rpt\Script\RptPaidItem.js" />
+    <Content Include="Module\Rpt\Script\DeptProfit.js" />
+    <Content Include="Module\Rpt\Script\UserProfit.js" />
+    <Content Include="Module\Rpt\Script\OrderTypeRpt.js" />
+    <Content Include="Module\Rpt\Script\OrderSheet.js" />
+    <Content Include="Module\Rpt\StatisticRpt.aspx" />
+    <Content Include="Module\Rpt\SupplierPayable.aspx" />
+    <Content Include="Module\Rpt\UserProfit.aspx" />
+    <Content Include="Module\Search\CustomerSearch.aspx" />
+    <Content Include="Module\Search\OrderSearch.aspx" />
+    <Content Include="Module\Search\ResourceSearch.aspx" />
+    <Content Include="Module\Search\RouteSearch.aspx" />
+    <Content Include="Module\Search\Script\ResSearch.js" />
+    <Content Include="Module\Search\Script\CrmSearch.js" />
+    <Content Include="Module\Search\Script\OrdSearch.js" />
+    <Content Include="Module\Search\Search.css" />
+    <Content Include="Module\Sys\AreaTreeTable.aspx" />
+    <Content Include="Module\Sys\Dept.aspx" />
+    <Content Include="Module\Sys\DeptEdit.aspx" />
+    <Content Include="Module\Sys\Log.aspx" />
+    <Content Include="Module\Sys\LogInfo.aspx" />
+    <Content Include="Module\Sys\OTAEdit.aspx" />
+    <Content Include="Module\Sys\OTASetting.aspx" />
+    <Content Include="Module\Sys\OTAUser.aspx" />
+    <Content Include="Module\Sys\OTAUserList.aspx" />
+    <Content Include="Module\Sys\Permission.aspx" />
+    <Content Include="Module\Sys\Role.aspx" />
+    <Content Include="Module\Sys\RoleEdit.aspx" />
+    <Content Include="Module\Sys\Script\AreaTree.js" />
+    <Content Include="Module\Sys\Script\Dept.js" />
+    <Content Include="Module\Sys\Script\OTASetting.js" />
+    <Content Include="Module\Sys\Script\OTAUser.js" />
+    <Content Include="Module\Sys\Script\OTAUserList.js" />
+    <Content Include="Module\Sys\Script\Permission.js" />
+    <Content Include="Module\Sys\Script\Role.js" />
+    <Content Include="Module\Sys\Script\RoleEdit.js" />
+    <Content Include="Module\Sys\Script\SelectOTAUser.js" />
+    <Content Include="Module\Sys\Script\SysInfoSet.js" />
+    <Content Include="Module\Sys\Script\User.js" />
+    <Content Include="Module\Sys\Script\Log.js" />
+    <Content Include="Module\Sys\SelectOTAArea.aspx" />
+    <Content Include="Module\Sys\SelectOTAUser.aspx" />
+    <Content Include="Module\Sys\SysInfoSet.aspx" />
+    <Content Include="Module\Sys\User.aspx" />
+    <Content Include="Module\Sys\UserEdit.aspx" />
+    <Content Include="Module\Sys\UserPermission.aspx" />
+    <Content Include="Module\Tools\PerpetualCalendar.htm" />
+    <Content Include="Module\Order\TourOrderList.aspx" />
+    <Content Include="Module\T\RouteEdit.aspx" />
+    <Content Include="Module\T\RouteInfo.aspx" />
+    <Content Include="Module\T\RouteList.aspx" />
+    <Content Include="Module\T\Script\RouteEdit.js" />
+    <Content Include="Module\T\Script\RouteList.js" />
+    <Content Include="Module\T\Settings.aspx" />
+    <Content Include="Resource\Destination.xml" />
+    <Content Include="Resource\InitData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resource\SmsConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\Plugin\date_time\calendar.js" />
+    <Content Include="Scripts\Plugin\date_time\config.js" />
+    <Content Include="Scripts\Plugin\date_time\lang\en.js" />
+    <Content Include="Scripts\Plugin\date_time\lang\zh-cn.js" />
+    <Content Include="Scripts\Plugin\date_time\lang\zh-tw.js" />
+    <Content Include="Scripts\Plugin\date_time\My97DatePicker.htm" />
+    <Content Include="Scripts\Plugin\date_time\readme.txt" />
+    <Content Include="Scripts\Plugin\date_time\skin\datePicker.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\datepicker.css" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\down.jpg" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\img.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\left.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\navLeft.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\navRight.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\qs.jpg" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\right.gif" />
+    <Content Include="Scripts\Plugin\date_time\skin\default\up.jpg" />
+    <Content Include="Scripts\Plugin\date_time\skin\WdatePicker.css" />
+    <Content Include="Scripts\Plugin\date_time\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\Plugin\date_time\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\Plugin\date_time\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\Plugin\date_time\WdatePicker.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\bar.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\chord.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\eventRiver.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\force.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\funnel.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\gauge.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\k.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\line.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\map.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\pie.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\radar.js" />
+    <Content Include="Scripts\Plugin\eChart\chart\scatter.js" />
+    <Content Include="Scripts\Plugin\eChart\echarts.js" />
+    <Content Include="Scripts\Plugin\jqPlot\excanvas.js" />
+    <Content Include="Scripts\Plugin\jqPlot\excanvas.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\jquery.jqplot.css" />
+    <Content Include="Scripts\Plugin\jqPlot\jquery.jqplot.js" />
+    <Content Include="Scripts\Plugin\jqPlot\jquery.jqplot.min.css" />
+    <Content Include="Scripts\Plugin\jqPlot\jquery.jqplot.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.barRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.barRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.BezierCurveRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.BezierCurveRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.blockRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.blockRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.bubbleRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.bubbleRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasAxisLabelRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasAxisLabelRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasAxisTickRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasOverlay.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasOverlay.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasTextRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.canvasTextRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.categoryAxisRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.ciParser.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.ciParser.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.cursor.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.cursor.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.dateAxisRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.dateAxisRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.donutRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.donutRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.dragable.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.dragable.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.enhancedLegendRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.enhancedLegendRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.funnelRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.funnelRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.highlighter.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.highlighter.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.json2.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.json2.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.logAxisRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.logAxisRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mekkoAxisRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mekkoAxisRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mekkoRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mekkoRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.meterGaugeRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.meterGaugeRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mobile.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.mobile.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.ohlcRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.ohlcRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pieRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pieRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pointLabels.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pointLabels.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidAxisRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidAxisRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidGridRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidGridRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidRenderer.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.pyramidRenderer.min.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.trendline.js" />
+    <Content Include="Scripts\Plugin\jqPlot\plugin\jqplot.trendline.min.js" />
+    <Content Include="Scripts\Plugin\kindeditor\asp.net\bin\LitJSON.dll" />
+    <Content Include="Scripts\Plugin\kindeditor\asp.net\README.txt" />
+    <Content Include="Scripts\Plugin\kindeditor\attached\image\20120302\20120302113259_6373.jpg" />
+    <Content Include="Scripts\Plugin\kindeditor\attached\image\20120304\20120304164311_5207.jpg" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\auto-height.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\colorpicker.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\custom-plugin.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\custom-theme.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\default.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\dialog.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\dynamic-load.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\file-dialog.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\file-manager.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\filter-mode.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\image-dialog.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\index.css" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\index.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\jquery-ui.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\jquery.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\mootools.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\multi-image-dialog.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\multi-language.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\newline.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\node.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\paste-type.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\qqstyle.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\readonly.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\simple.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\total.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\uploadbutton.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\url-type.html" />
+    <Content Include="Scripts\Plugin\kindeditor\examples\word-count.html" />
+    <Content Include="Scripts\Plugin\kindeditor\kindeditor-all-min.js" />
+    <Content Include="Scripts\Plugin\kindeditor\kindeditor-all.js" />
+    <Content Include="Scripts\Plugin\kindeditor\kindeditor-min.js" />
+    <Content Include="Scripts\Plugin\kindeditor\kindeditor.js" />
+    <Content Include="Scripts\Plugin\kindeditor\lang\ar.js" />
+    <Content Include="Scripts\Plugin\kindeditor\lang\en.js" />
+    <Content Include="Scripts\Plugin\kindeditor\lang\zh_CN.js" />
+    <Content Include="Scripts\Plugin\kindeditor\lang\zh_TW.js" />
+    <Content Include="Scripts\Plugin\kindeditor\license.txt" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\code\code.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\code\prettify.css" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\code\prettify.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\flash\flash.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\image.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\images\refresh.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\link\link.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\map\map.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\map\map.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\media\media.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\preview\preview.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\table\table.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\template\html\1.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\template\html\2.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\template\html\3.html" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\template\template.js" />
+    <Content Include="Scripts\Plugin\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\anchor.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\blank.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\flash.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\loading.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\media.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\common\rm.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\default\background.png" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\default\bg.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\default\default.css" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\default\default.png" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\qq\editor.gif" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\qq\qq.css" />
+    <Content Include="Scripts\Plugin\kindeditor\themes\simple\simple.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\lhgcore.lhgdialog.min.js" />
+    <Content Include="Scripts\Plugin\lhgdialog\lhgdialog.js" />
+    <Content Include="Scripts\Plugin\lhgdialog\lhgdialog.min.js" />
+    <Content Include="Scripts\Plugin\lhgdialog\lhgdialog文件夹中文件目录结构说明.txt" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\blue_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\blue_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\blue_titbtn.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\blue\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s2.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\chrome\chrome_s3.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\default.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\discuz.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\iblack_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\iblack_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblack\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\iblue_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\iblue_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_lt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_rt2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\iblue\ie6\ui_t2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\fail.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\hits.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\i.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\32X32\succ.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\alert.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\confirm.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\discuz_bg.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\error.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\face-sad.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\face-smile.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\gb_tip_layer.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\gb_tip_layer_ie6.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\lhgcore.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\loading.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\prompt.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\success.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\icons\tips.gif" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\idialog_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_close.hover.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_close.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\idialog\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_b.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_l.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_lb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_lt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_r.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_rb.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_rt.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\ie6\ui_t.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\igreen_s.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\igreen\igreen_s2.png" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\jtop.css" />
+    <Content Include="Scripts\Plugin\lhgdialog\skins\mac.css" />
+    <Content Include="Scripts\Plugin\drpdialog\drpdialog.js" />
+    <Content Include="Scripts\Plugin\pagination\jquery.pagination.js" />
+    <Content Include="Scripts\Plugin\pagination\pagination.css" />
+    <Content Include="Scripts\Plugin\RotatorAd\jquery.rotatorAd.js" />
+    <Content Include="Scripts\Plugin\Uploadify\jquery.uploadify-3.1.js" />
+    <Content Include="Scripts\Plugin\Uploadify\jquery.uploadify-3.1.min.js" />
+    <Content Include="Scripts\Plugin\Uploadify\uploadify-cancel.png" />
+    <Content Include="Scripts\Plugin\Uploadify\uploadify.css" />
+    <Content Include="Scripts\Plugin\Uploadify\uploadify.swf" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\1_close.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\1_open.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\2.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\3.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\4.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\5.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\6.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\7.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\8.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\9.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\folder.png" />
+    <Content Include="Scripts\Plugin\zTree\img\diy\view.png" />
+    <Content Include="Scripts\Plugin\zTree\img\doc.png" />
+    <Content Include="Scripts\Plugin\zTree\img\line_conn.gif" />
+    <Content Include="Scripts\Plugin\zTree\img\loading.gif" />
+    <Content Include="Scripts\Plugin\zTree\img\zTreeStandard.gif" />
+    <Content Include="Scripts\Plugin\zTree\img\zTreeStandard.png" />
+    <Content Include="Scripts\Plugin\zTree\jquery.ztree.core-3.5.js" />
+    <Content Include="Scripts\Plugin\zTree\jquery.ztree.excheck-3.5.js" />
+    <Content Include="Scripts\Plugin\zTree\jquery.ztree.exedit-3.5.js" />
+    <Content Include="Scripts\Plugin\zTree\zTreeStyle.css" />
+    <Content Include="UI\ad\btn_qzone_big.png" />
+    <Content Include="UI\ad\btn_sina_big.png" />
+    <Content Include="UI\ad\btn_tencent_big.png" />
+    <Content Include="UI\ad\float_bottom_bg.png" />
+    <Content Include="UI\ad\icon_close.png" />
+    <Content Include="UI\ad\login_panel_bg.png" />
+    <Content Include="UI\ad\ad.css" />
+    <Content Include="UI\locale\easyui-lang-af.js" />
+    <Content Include="UI\locale\easyui-lang-am.js" />
+    <Content Include="UI\locale\easyui-lang-ar.js" />
+    <Content Include="UI\locale\easyui-lang-bg.js" />
+    <Content Include="UI\locale\easyui-lang-ca.js" />
+    <Content Include="UI\locale\easyui-lang-cs.js" />
+    <Content Include="UI\locale\easyui-lang-cz.js" />
+    <Content Include="UI\locale\easyui-lang-da.js" />
+    <Content Include="UI\locale\easyui-lang-de.js" />
+    <Content Include="UI\locale\easyui-lang-el.js" />
+    <Content Include="UI\locale\easyui-lang-en.js" />
+    <Content Include="UI\locale\easyui-lang-es.js" />
+    <Content Include="UI\locale\easyui-lang-fr.js" />
+    <Content Include="UI\locale\easyui-lang-it.js" />
+    <Content Include="UI\locale\easyui-lang-jp.js" />
+    <Content Include="UI\locale\easyui-lang-nl.js" />
+    <Content Include="UI\locale\easyui-lang-pl.js" />
+    <Content Include="UI\locale\easyui-lang-pt_BR.js" />
+    <Content Include="UI\locale\easyui-lang-ru.js" />
+    <Content Include="UI\locale\easyui-lang-sv_SE.js" />
+    <Content Include="UI\locale\easyui-lang-tr.js" />
+    <Content Include="UI\locale\easyui-lang-zh_TW.js" />
+    <Content Include="UI\plugins\jquery.extendvalid.js" />
+    <Content Include="UI\plugins\jquery.treegrid.checkclick.extend.js" />
+    <Content Include="UI\plugins\jquery.treegrid.extend.js" />
+    <Content Include="UI\themes\bootstrap\accordion.css" />
+    <Content Include="UI\themes\bootstrap\calendar.css" />
+    <Content Include="UI\themes\bootstrap\combo.css" />
+    <Content Include="UI\themes\bootstrap\combobox.css" />
+    <Content Include="UI\themes\bootstrap\datagrid.css" />
+    <Content Include="UI\themes\bootstrap\datebox.css" />
+    <Content Include="UI\themes\bootstrap\dialog.css" />
+    <Content Include="UI\themes\bootstrap\easyui.css" />
+    <Content Include="UI\themes\bootstrap\filebox.css" />
+    <Content Include="UI\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="UI\themes\bootstrap\images\blank.gif" />
+    <Content Include="UI\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="UI\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="UI\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="UI\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="UI\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="UI\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="UI\themes\bootstrap\images\loading.gif" />
+    <Content Include="UI\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="UI\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="UI\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="UI\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="UI\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="UI\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="UI\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="UI\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="UI\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="UI\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="UI\themes\bootstrap\layout.css" />
+    <Content Include="UI\themes\bootstrap\linkbutton.css" />
+    <Content Include="UI\themes\bootstrap\menu.css" />
+    <Content Include="UI\themes\bootstrap\menubutton.css" />
+    <Content Include="UI\themes\bootstrap\messager.css" />
+    <Content Include="UI\themes\bootstrap\numberbox.css" />
+    <Content Include="UI\themes\bootstrap\pagination.css" />
+    <Content Include="UI\themes\bootstrap\panel.css" />
+    <Content Include="UI\themes\bootstrap\progressbar.css" />
+    <Content Include="UI\themes\bootstrap\propertygrid.css" />
+    <Content Include="UI\themes\bootstrap\searchbox.css" />
+    <Content Include="UI\themes\bootstrap\slider.css" />
+    <Content Include="UI\themes\bootstrap\spinner.css" />
+    <Content Include="UI\themes\bootstrap\splitbutton.css" />
+    <Content Include="UI\themes\bootstrap\tabs.css" />
+    <Content Include="UI\themes\bootstrap\textbox.css" />
+    <Content Include="UI\themes\bootstrap\tooltip.css" />
+    <Content Include="UI\themes\bootstrap\tree.css" />
+    <Content Include="UI\themes\bootstrap\validatebox.css" />
+    <Content Include="UI\themes\bootstrap\window.css" />
+    <Content Include="UI\themes\default\images\active.png" />
+    <Content Include="UI\themes\default\images\arrow1.png" />
+    <Content Include="UI\themes\default\images\arrow2.png" />
+    <Content Include="UI\themes\default\images\arrow_l.png" />
+    <Content Include="UI\themes\default\images\arrow_r.png" />
+    <Content Include="UI\themes\default\images\b.png" />
+    <Content Include="UI\themes\default\images\bg.jpg" />
+    <Content Include="UI\themes\default\images\bg.png" />
+    <Content Include="UI\themes\default\images\bit06.gif" />
+    <Content Include="UI\themes\default\images\bottom-bj.jpg" />
+    <Content Include="UI\themes\default\images\center.png" />
+    <Content Include="UI\themes\default\images\customer.png" />
+    <Content Include="UI\themes\default\images\dir.png" />
+    <Content Include="UI\themes\default\images\divider.png" />
+    <Content Include="UI\themes\default\images\eLogo.png" />
+    <Content Include="UI\themes\default\images\error.jpg" />
+    <Content Include="UI\themes\default\images\exit.png" />
+    <Content Include="UI\themes\default\images\finance.png" />
+    <Content Include="UI\themes\default\images\grad-overlay.png" />
+    <Content Include="UI\themes\default\images\headHd.png" />
+    <Content Include="UI\themes\default\images\headMenus.png" />
+    <Content Include="UI\themes\default\images\help.png" />
+    <Content Include="UI\themes\default\images\help2.png" />
+    <Content Include="UI\themes\default\images\help3.png" />
+    <Content Include="UI\themes\default\images\home.png" />
+    <Content Include="UI\themes\default\images\home_a.png" />
+    <Content Include="UI\themes\default\images\home_b.png" />
+    <Content Include="UI\themes\default\images\hover.png" />
+    <Content Include="UI\themes\default\images\home.gif" />
+    <Content Include="UI\themes\default\images\ico6.gif" />
+    <Content Include="UI\themes\default\images\icons.png" />
+    <Content Include="UI\themes\default\images\img3.gif" />
+    <Content Include="UI\themes\default\images\inputbg.JPG" />
+    <Content Include="UI\themes\default\images\itembg.jpg" />
+    <Content Include="UI\themes\default\images\jobber_bj01.jpg" />
+    <Content Include="UI\themes\default\images\jobber_mat.jpg" />
+    <Content Include="UI\themes\default\images\line.png" />
+    <Content Include="UI\themes\default\images\line_bj09.jpg" />
+    <Content Include="UI\themes\default\images\littletrumpet.png" />
+    <Content Include="UI\themes\default\images\login_red_user.png" />
+    <Content Include="UI\themes\default\images\login_user.png" />
+    <Content Include="UI\themes\default\images\login_user2.png" />
+    <Content Include="UI\themes\default\images\logo.gif" />
+    <Content Include="UI\themes\default\images\logo.png" />
+    <Content Include="UI\themes\default\images\logout_a.png" />
+    <Content Include="UI\themes\default\images\manager.png" />
+    <Content Include="UI\themes\default\images\menusBg.gif" />
+    <Content Include="UI\themes\default\images\menu_bg_1.gif" />
+    <Content Include="UI\themes\default\images\mobile.png" />
+    <Content Include="UI\themes\default\images\msg.png" />
+    <Content Include="UI\themes\default\images\navMod.gif" />
+    <Content Include="UI\themes\default\images\nav_1.png" />
+    <Content Include="UI\themes\default\images\nav_2.png" />
+    <Content Include="UI\themes\default\images\nav_add.png" />
+    <Content Include="UI\themes\default\images\nav_audit.png" />
+    <Content Include="UI\themes\default\images\nav_customer.png" />
+    <Content Include="UI\themes\default\images\nav_dept.png" />
+    <Content Include="UI\themes\default\images\nav_dir.png" />
+    <Content Include="UI\themes\default\images\nav_income.png" />
+    <Content Include="UI\themes\default\images\nav_info.png" />
+    <Content Include="UI\themes\default\images\nav_invoice.png" />
+    <Content Include="UI\themes\default\images\nav_line_rpt.png" />
+    <Content Include="UI\themes\default\images\nav_list.png" />
+    <Content Include="UI\themes\default\images\nav_message.png" />
+    <Content Include="UI\themes\default\images\nav_nav.png" />
+    <Content Include="UI\themes\default\images\nav_olist.png" />
+    <Content Include="UI\themes\default\images\nav_order.png" />
+    <Content Include="UI\themes\default\images\nav_ordlist.png" />
+    <Content Include="UI\themes\default\images\nav_org.png" />
+    <Content Include="UI\themes\default\images\nav_pay.png" />
+    <Content Include="UI\themes\default\images\nav_permission.png" />
+    <Content Include="UI\themes\default\images\nav_query.png" />
+    <Content Include="UI\themes\default\images\nav_roles.png" />
+    <Content Include="UI\themes\default\images\nav_rpt_tbl.png" />
+    <Content Include="UI\themes\default\images\nav_setting.png" />
+    <Content Include="UI\themes\default\images\nav_subtract.png" />
+    <Content Include="UI\themes\default\images\nav_ticket.png" />
+    <Content Include="UI\themes\default\images\nav_user.png" />
+    <Content Include="UI\themes\default\images\nav_venue.png" />
+    <Content Include="UI\themes\default\images\nav_wechat.png" />
+    <Content Include="UI\themes\default\images\new.gif" />
+    <Content Include="UI\themes\default\images\newmsg.png" />
+    <Content Include="UI\themes\default\images\none.jpg" />
+    <Content Include="UI\themes\default\images\notice.png" />
+    <Content Include="UI\themes\default\images\op.png" />
+    <Content Include="UI\themes\default\images\pageicon.png" />
+    <Content Include="UI\themes\default\images\password.png" />
+    <Content Include="UI\themes\default\images\pd_bg.png" />
+    <Content Include="UI\themes\default\images\pHome.png" />
+    <Content Include="UI\themes\default\images\phone.png" />
+    <Content Include="UI\themes\default\images\product.png" />
+    <Content Include="UI\themes\default\images\qq.png" />
+    <Content Include="UI\themes\default\images\query.png" />
+    <Content Include="UI\themes\default\images\red_arr.gif" />
+    <Content Include="UI\themes\default\images\red_user.png" />
+    <Content Include="UI\themes\default\images\refresh.png" />
+    <Content Include="UI\themes\default\images\resource.png" />
+    <Content Include="UI\themes\default\images\right-bj01.jpg" />
+    <Content Include="UI\themes\default\images\rootMenuBackground.gif" />
+    <Content Include="UI\themes\default\images\rpt.png" />
+    <Content Include="UI\themes\default\images\sales.png" />
+    <Content Include="UI\themes\default\images\selectedl.png" />
+    <Content Include="UI\themes\default\images\selectedr.png" />
+    <Content Include="UI\themes\default\images\system.png" />
+    <Content Include="UI\themes\default\images\tab_bg.gif" />
+    <Content Include="UI\themes\default\images\tallnew.png" />
+    <Content Include="UI\themes\default\images\teach_menu.png" />
+    <Content Include="UI\themes\default\images\teach_menu1.png" />
+    <Content Include="UI\themes\default\images\teach_menu2.png" />
+    <Content Include="UI\themes\default\images\teach_nav_tit.jpg" />
+    <Content Include="UI\themes\default\images\template.png" />
+    <Content Include="UI\themes\default\images\title.png" />
+    <Content Include="UI\themes\default\images\title16_bg.gif" />
+    <Content Include="UI\themes\default\images\top.png" />
+    <Content Include="UI\themes\default\images\topbg.png" />
+    <Content Include="UI\themes\default\images\topnav_bg.gif" />
+    <Content Include="UI\themes\default\images\topnav_hover.gif" />
+    <Content Include="UI\themes\default\images\toptrbg.gif" />
+    <Content Include="UI\themes\default\images\top_bg.gif" />
+    <Content Include="UI\themes\default\images\top_bg.jpg" />
+    <Content Include="UI\themes\default\images\top_bg2.jpg" />
+    <Content Include="UI\themes\default\images\top_bj.jpg" />
+    <Content Include="UI\themes\default\images\top_Cover.png" />
+    <Content Include="UI\themes\default\images\t_n.png" />
+    <Content Include="UI\themes\default\images\user.png" />
+    <Content Include="UI\themes\default\images\validatebox_arrows.png" />
+    <Content Include="UI\themes\default\images\wo2.png" />
+    <Content Include="UI\themes\default\layoutui.css" />
+    <Content Include="UI\themes\default\UI.css" />
+    <Content Include="Scripts\master.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="UI\easyloader.js" />
+    <Content Include="UI\jquery.easyui.min.js" />
+    <Content Include="UI\locale\easyui-lang-zh_CN.js" />
+    <Content Include="UI\plugins\jquery.accordion.js" />
+    <Content Include="UI\plugins\jquery.calendar.js" />
+    <Content Include="UI\plugins\jquery.combo.js" />
+    <Content Include="UI\plugins\jquery.combobox.js" />
+    <Content Include="UI\plugins\jquery.combogrid.js" />
+    <Content Include="UI\plugins\jquery.combotree.js" />
+    <Content Include="UI\plugins\jquery.datagrid.js" />
+    <Content Include="UI\plugins\jquery.datebox.js" />
+    <Content Include="UI\plugins\jquery.datetimebox.js" />
+    <Content Include="UI\plugins\jquery.datetimespinner.js" />
+    <Content Include="UI\plugins\jquery.dialog.js" />
+    <Content Include="UI\plugins\jquery.draggable.js" />
+    <Content Include="UI\plugins\jquery.droppable.js" />
+    <Content Include="UI\plugins\jquery.filebox.js" />
+    <Content Include="UI\plugins\jquery.form.js" />
+    <Content Include="UI\plugins\jquery.layout.js" />
+    <Content Include="UI\plugins\jquery.linkbutton.js" />
+    <Content Include="UI\plugins\jquery.menu.js" />
+    <Content Include="UI\plugins\jquery.menubutton.js" />
+    <Content Include="UI\plugins\jquery.messager.js" />
+    <Content Include="UI\plugins\jquery.numberbox.js" />
+    <Content Include="UI\plugins\jquery.numberspinner.js" />
+    <Content Include="UI\plugins\jquery.pagination.js" />
+    <Content Include="UI\plugins\jquery.panel.js" />
+    <Content Include="UI\plugins\jquery.parser.js" />
+    <Content Include="UI\plugins\jquery.progressbar.js" />
+    <Content Include="UI\plugins\jquery.propertygrid.js" />
+    <Content Include="UI\plugins\jquery.resizable.js" />
+    <Content Include="UI\plugins\jquery.searchbox.js" />
+    <Content Include="UI\plugins\jquery.slider.js" />
+    <Content Include="UI\plugins\jquery.spinner.js" />
+    <Content Include="UI\plugins\jquery.splitbutton.js" />
+    <Content Include="UI\plugins\jquery.tabs.js" />
+    <Content Include="UI\plugins\jquery.textbox.js" />
+    <Content Include="UI\plugins\jquery.timespinner.js" />
+    <Content Include="UI\plugins\jquery.tooltip.js" />
+    <Content Include="UI\plugins\jquery.tree.js" />
+    <Content Include="UI\plugins\jquery.treegrid.js" />
+    <Content Include="UI\plugins\jquery.validatebox.js" />
+    <Content Include="UI\plugins\jquery.window.js" />
+    <Content Include="UI\themes\default\accordion.css" />
+    <Content Include="UI\themes\default\calendar.css" />
+    <Content Include="UI\themes\default\combo.css" />
+    <Content Include="UI\themes\default\combobox.css" />
+    <Content Include="UI\themes\default\datagrid.css" />
+    <Content Include="UI\themes\default\datebox.css" />
+    <Content Include="UI\themes\default\dialog.css" />
+    <Content Include="UI\themes\default\easyui.css" />
+    <Content Include="UI\themes\default\filebox.css" />
+    <Content Include="UI\themes\default\images\accordion_arrows.png" />
+    <Content Include="UI\themes\default\images\blank.gif" />
+    <Content Include="UI\themes\default\images\calendar_arrows.png" />
+    <Content Include="UI\themes\default\images\combo_arrow.png" />
+    <Content Include="UI\themes\default\images\datagrid_icons.png" />
+    <Content Include="UI\themes\default\images\datebox_arrow.png" />
+    <Content Include="UI\themes\default\images\layout_arrows.png" />
+    <Content Include="UI\themes\default\images\linkbutton_bg.png" />
+    <Content Include="UI\themes\default\images\loading.gif" />
+    <Content Include="UI\themes\default\images\menu_arrows.png" />
+    <Content Include="UI\themes\default\images\messager_icons.png" />
+    <Content Include="UI\themes\default\images\pagination_icons.png" />
+    <Content Include="UI\themes\default\images\panel_tools.png" />
+    <Content Include="UI\themes\default\images\searchbox_button.png" />
+    <Content Include="UI\themes\default\images\slider_handle.png" />
+    <Content Include="UI\themes\default\images\spinner_arrows.png" />
+    <Content Include="UI\themes\default\images\tabs_icons.png" />
+    <Content Include="UI\themes\default\images\tree_icons.png" />
+    <Content Include="UI\themes\default\images\validatebox_warning.png" />
+    <Content Include="UI\themes\default\layout.css" />
+    <Content Include="UI\themes\default\linkbutton.css" />
+    <Content Include="UI\themes\default\menu.css" />
+    <Content Include="UI\themes\default\menubutton.css" />
+    <Content Include="UI\themes\default\messager.css" />
+    <Content Include="UI\themes\default\numberbox.css" />
+    <Content Include="UI\themes\default\pagination.css" />
+    <Content Include="UI\themes\default\panel.css" />
+    <Content Include="UI\themes\default\progressbar.css" />
+    <Content Include="UI\themes\default\propertygrid.css" />
+    <Content Include="UI\themes\default\searchbox.css" />
+    <Content Include="UI\themes\default\slider.css" />
+    <Content Include="UI\themes\default\spinner.css" />
+    <Content Include="UI\themes\default\splitbutton.css" />
+    <Content Include="UI\themes\default\tabs.css" />
+    <Content Include="UI\themes\default\textbox.css" />
+    <Content Include="UI\themes\default\tooltip.css" />
+    <Content Include="UI\themes\default\tree.css" />
+    <Content Include="UI\themes\default\validatebox.css" />
+    <Content Include="UI\themes\default\window.css" />
+    <Content Include="UI\themes\default\layoutui-blue.css" />
+    <Content Include="UI\themes\default\layoutui-gray.css" />
+    <Content Include="UI\themes\icon.css" />
+    <Content Include="UI\themes\login\icons\2.png" />
+    <Content Include="UI\themes\login\icons\29483.gif" />
+    <Content Include="UI\themes\login\icons\archive.png" />
+    <Content Include="UI\themes\login\icons\arrow.png" />
+    <Content Include="UI\themes\login\icons\back.png" />
+    <Content Include="UI\themes\login\icons\bb.png" />
+    <Content Include="UI\themes\login\icons\blank.gif" />
+    <Content Include="UI\themes\login\icons\briefcase.png" />
+    <Content Include="UI\themes\login\icons\calendar.png" />
+    <Content Include="UI\themes\login\icons\cancel.png" />
+    <Content Include="UI\themes\login\icons\car.png" />
+    <Content Include="UI\themes\login\icons\category.png" />
+    <Content Include="UI\themes\login\icons\clear.png" />
+    <Content Include="UI\themes\login\icons\cut.png" />
+    <Content Include="UI\themes\login\icons\d.png" />
+    <Content Include="UI\themes\login\icons\del.png" />
+    <Content Include="UI\themes\login\icons\dir.png" />
+    <Content Include="UI\themes\login\icons\directory.png" />
+    <Content Include="UI\themes\login\icons\doc-do.png" />
+    <Content Include="UI\themes\login\icons\download.png" />
+    <Content Include="UI\themes\login\icons\edit_add.png" />
+    <Content Include="UI\themes\login\icons\edit_remove.png" />
+    <Content Include="UI\themes\login\icons\end.png" />
+    <Content Include="UI\themes\login\icons\excel.png" />
+    <Content Include="UI\themes\login\icons\exit.png" />
+    <Content Include="UI\themes\login\icons\export.png" />
+    <Content Include="UI\themes\login\icons\filesave.png" />
+    <Content Include="UI\themes\login\icons\filter.png" />
+    <Content Include="UI\themes\login\icons\finish.png" />
+    <Content Include="UI\themes\login\icons\flight.png" />
+    <Content Include="UI\themes\login\icons\form.png" />
+    <Content Include="UI\themes\login\icons\help.png" />
+    <Content Include="UI\themes\login\icons\import.png" />
+    <Content Include="UI\themes\login\icons\in.png" />
+    <Content Include="UI\themes\login\icons\invoice.png" />
+    <Content Include="UI\themes\login\icons\large_chart.png" />
+    <Content Include="UI\themes\login\icons\large_clipart.png" />
+    <Content Include="UI\themes\login\icons\large_picture.png" />
+    <Content Include="UI\themes\login\icons\large_shapes.png" />
+    <Content Include="UI\themes\login\icons\large_smartart.png" />
+    <Content Include="UI\themes\login\icons\lock.png" />
+    <Content Include="UI\themes\login\icons\mail.png" />
+    <Content Include="UI\themes\login\icons\man.png" />
+    <Content Include="UI\themes\login\icons\message.png" />
+    <Content Include="UI\themes\login\icons\message2.png" />
+    <Content Include="UI\themes\login\icons\mini_add.png" />
+    <Content Include="UI\themes\login\icons\mini_edit.png" />
+    <Content Include="UI\themes\login\icons\mini_refresh.png" />
+    <Content Include="UI\themes\login\icons\mphone.png" />
+    <Content Include="UI\themes\login\icons\new.gif" />
+    <Content Include="UI\themes\login\icons\no.png" />
+    <Content Include="UI\themes\login\icons\ok.png" />
+    <Content Include="UI\themes\login\icons\online.png" />
+    <Content Include="UI\themes\login\icons\out.png" />
+    <Content Include="UI\themes\login\icons\page.png" />
+    <Content Include="UI\themes\login\icons\password.png" />
+    <Content Include="UI\themes\login\icons\pay.png" />
+    <Content Include="UI\themes\login\icons\pencil.png" />
+    <Content Include="UI\themes\login\icons\personal.png" />
+    <Content Include="UI\themes\login\icons\phone.png" />
+    <Content Include="UI\themes\login\icons\print.png" />
+    <Content Include="UI\themes\login\icons\redo.png" />
+    <Content Include="UI\themes\login\icons\Reject.png" />
+    <Content Include="UI\themes\login\icons\reload.png" />
+    <Content Include="UI\themes\login\icons\search.png" />
+    <Content Include="UI\themes\login\icons\send.png" />
+    <Content Include="UI\themes\login\icons\settings.png" />
+    <Content Include="UI\themes\login\icons\start.png" />
+    <Content Include="UI\themes\login\icons\statistic.png" />
+    <Content Include="UI\themes\login\icons\sum.png" />
+    <Content Include="UI\themes\login\icons\tc.png" />
+    <Content Include="UI\themes\login\icons\tip.png" />
+    <Content Include="UI\themes\login\icons\todo.png" />
+    <Content Include="UI\themes\login\icons\u.png" />
+    <Content Include="UI\themes\login\icons\udo.png" />
+    <Content Include="UI\themes\login\icons\undo.png" />
+    <Content Include="UI\themes\login\icons\user2.png" />
+    <Content Include="UI\themes\login\icons\userview.png" />
+    <Content Include="UI\themes\login\icons\word.png" />
+    <Content Include="UI\themes\login\images\buttonbg.png" />
+    <Content Include="UI\themes\login\images\chose.jpg" />
+    <Content Include="UI\themes\login\images\cloud.png" />
+    <Content Include="UI\themes\login\images\error.jpg" />
+    <Content Include="UI\themes\login\images\error.png" />
+    <Content Include="UI\themes\login\images\loginbg1.png" />
+    <Content Include="UI\themes\login\images\loginbg2.png" />
+    <Content Include="UI\themes\login\images\loginbg3.png" />
+    <Content Include="UI\themes\login\images\logincode.png" />
+    <Content Include="UI\themes\login\images\logininfo.png" />
+    <Content Include="UI\themes\login\images\loginpassword.png" />
+    <Content Include="UI\themes\login\images\loginsj.png" />
+    <Content Include="UI\themes\login\images\loginuser.png" />
+    <Content Include="UI\themes\login\images\logo.PNG" />
+    <Content Include="UI\themes\login\images\refresh.gif" />
+    <Content Include="UI\themes\login\images\tg-mj1dab06.jpg" />
+    <Content Include="UI\themes\login\images\tipsbg.JPG" />
+    <Content Include="UI\themes\login\Login.css" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\TmsHelp\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\TmsHelp\webserviceinfo.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiTest.aspx.cs">
+      <DependentUpon>ApiTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApiTest.aspx.designer.cs">
+      <DependentUpon>ApiTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\ChkAcct.Master.cs">
+      <DependentUpon>ChkAcct.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckAccount\ChkAcct.Master.designer.cs">
+      <DependentUpon>ChkAcct.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckAccount\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckAccount\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\OrderSelect.aspx.cs">
+      <DependentUpon>OrderSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckAccount\OrderSelect.aspx.designer.cs">
+      <DependentUpon>OrderSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\Service\OrderCheckAccount.ashx.cs">
+      <DependentUpon>OrderCheckAccount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckAccount\ViewBill.aspx.cs">
+      <DependentUpon>ViewBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckAccount\ViewBill.aspx.designer.cs">
+      <DependentUpon>ViewBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeInfo.aspx.cs">
+      <DependentUpon>IncomeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeInfo.aspx.designer.cs">
+      <DependentUpon>IncomeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeSign.aspx.cs">
+      <DependentUpon>IncomeSign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeSign.aspx.designer.cs">
+      <DependentUpon>IncomeSign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeSignEdit.aspx.cs">
+      <DependentUpon>IncomeSignEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\IncomeSignEdit.aspx.designer.cs">
+      <DependentUpon>IncomeSignEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\PayableSign.aspx.cs">
+      <DependentUpon>PayableSign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\PayableSign.aspx.designer.cs">
+      <DependentUpon>PayableSign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\PayInfo.aspx.cs">
+      <DependentUpon>PayInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\PayInfo.aspx.designer.cs">
+      <DependentUpon>PayInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\PaySignEdit.aspx.cs">
+      <DependentUpon>PaySignEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\CheckIn\PaySignEdit.aspx.designer.cs">
+      <DependentUpon>PaySignEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\Service\IncomeSign.ashx.cs">
+      <DependentUpon>IncomeSign.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CheckIn\Service\PaySign.ashx.cs">
+      <DependentUpon>PaySign.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\BirthDay.aspx.cs">
+      <DependentUpon>BirthDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\BirthDay.aspx.designer.cs">
+      <DependentUpon>BirthDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerEdit.aspx.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerEdit.aspx.designer.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerImp.aspx.cs">
+      <DependentUpon>CustomerImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerImp.aspx.designer.cs">
+      <DependentUpon>CustomerImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerInfo.aspx.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerInfo.aspx.designer.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerVisit.aspx.cs">
+      <DependentUpon>CustomerVisit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\CustomerVisit.aspx.designer.cs">
+      <DependentUpon>CustomerVisit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\Prospect.aspx.cs">
+      <DependentUpon>Prospect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\Prospect.aspx.designer.cs">
+      <DependentUpon>Prospect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\SelectCustomer.aspx.cs">
+      <DependentUpon>SelectCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\SelectCustomer.aspx.designer.cs">
+      <DependentUpon>SelectCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\Service\Customer.ashx.cs">
+      <DependentUpon>Customer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\Service\CustomerVisit.ashx.cs">
+      <DependentUpon>CustomerVisit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\TraceEdit.aspx.cs">
+      <DependentUpon>TraceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\TraceEdit.aspx.designer.cs">
+      <DependentUpon>TraceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Crm\TradeOrder.aspx.cs">
+      <DependentUpon>TradeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Crm\TradeOrder.aspx.designer.cs">
+      <DependentUpon>TradeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\BizOrderList.aspx.cs">
+      <DependentUpon>BizOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\BizOrderList.aspx.designer.cs">
+      <DependentUpon>BizOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\CollectedItem.aspx.cs">
+      <DependentUpon>CollectedItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\CollectedItem.aspx.designer.cs">
+      <DependentUpon>CollectedItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\CollectedItemImport.aspx.cs">
+      <DependentUpon>CollectedItemImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\CollectedItemImport.aspx.designer.cs">
+      <DependentUpon>CollectedItemImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\CollectItemEdit.aspx.cs">
+      <DependentUpon>CollectItemEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\CollectItemEdit.aspx.designer.cs">
+      <DependentUpon>CollectItemEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\CreateInvoice.aspx.cs">
+      <DependentUpon>CreateInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\CreateInvoice.aspx.designer.cs">
+      <DependentUpon>CreateInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\DrawMoney.aspx.cs">
+      <DependentUpon>DrawMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\DrawMoney.aspx.designer.cs">
+      <DependentUpon>DrawMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\InvoiceMrg.aspx.cs">
+      <DependentUpon>InvoiceMrg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\InvoiceMrg.aspx.designer.cs">
+      <DependentUpon>InvoiceMrg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\InvoiceOp.aspx.cs">
+      <DependentUpon>InvoiceOp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\InvoiceOp.aspx.designer.cs">
+      <DependentUpon>InvoiceOp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\OrderBudgetFinal.aspx.cs">
+      <DependentUpon>OrderBudgetFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\OrderBudgetFinal.aspx.designer.cs">
+      <DependentUpon>OrderBudgetFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\OrderCollected.aspx.cs">
+      <DependentUpon>OrderCollected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\OrderCollected.aspx.designer.cs">
+      <DependentUpon>OrderCollected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\OrderDate.aspx.cs">
+      <DependentUpon>OrderDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\OrderDate.aspx.designer.cs">
+      <DependentUpon>OrderDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\PaidInvoice.aspx.cs">
+      <DependentUpon>PaidInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\PaidInvoice.aspx.designer.cs">
+      <DependentUpon>PaidInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\PaidInvoiceEdit.aspx.cs">
+      <DependentUpon>PaidInvoiceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\PaidInvoiceEdit.aspx.designer.cs">
+      <DependentUpon>PaidInvoiceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\PaidItem.aspx.cs">
+      <DependentUpon>PaidItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\PaidItem.aspx.designer.cs">
+      <DependentUpon>PaidItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Payable.aspx.cs">
+      <DependentUpon>Payable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\Payable.aspx.designer.cs">
+      <DependentUpon>Payable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\PayableAction.aspx.cs">
+      <DependentUpon>PayableAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\PayableAction.aspx.designer.cs">
+      <DependentUpon>PayableAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\PayableItem.aspx.cs">
+      <DependentUpon>PayableItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\PayableItem.aspx.designer.cs">
+      <DependentUpon>PayableItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\BalanceSettlement.ashx.cs">
+      <DependentUpon>BalanceSettlement.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\CollectedItem.ashx.cs">
+      <DependentUpon>CollectedItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\DrawMoney.ashx.cs">
+      <DependentUpon>DrawMoney.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\InvoiceMrg.ashx.cs">
+      <DependentUpon>InvoiceMrg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\OrderCollected.ashx.cs">
+      <DependentUpon>OrderCollected.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\OrderInfo.ashx.cs">
+      <DependentUpon>OrderInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\PaidInvoice.ashx.cs">
+      <DependentUpon>PaidInvoice.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\PaidItem.ashx.cs">
+      <DependentUpon>PaidItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\Payable.ashx.cs">
+      <DependentUpon>Payable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\PayableItem.ashx.cs">
+      <DependentUpon>PayableItem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\Service\TicketOrder.ashx.cs">
+      <DependentUpon>TicketOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\SettlementAction.aspx.cs">
+      <DependentUpon>SettlementAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\SettlementAction.aspx.designer.cs">
+      <DependentUpon>SettlementAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\SettlementBill.aspx.cs">
+      <DependentUpon>SettlementBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\SettlementBill.aspx.designer.cs">
+      <DependentUpon>SettlementBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\TeamOrderList.aspx.cs">
+      <DependentUpon>TeamOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\TeamOrderList.aspx.designer.cs">
+      <DependentUpon>TeamOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\TicketOrder.aspx.cs">
+      <DependentUpon>TicketOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\TicketOrder.aspx.designer.cs">
+      <DependentUpon>TicketOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\TourOrderList.aspx.cs">
+      <DependentUpon>TourOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\TourOrderList.aspx.designer.cs">
+      <DependentUpon>TourOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\BasicInfo.aspx.cs">
+      <DependentUpon>BasicInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\BasicInfo.aspx.designer.cs">
+      <DependentUpon>BasicInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\BasicInfoEdit.aspx.cs">
+      <DependentUpon>BasicInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\BasicInfoEdit.aspx.designer.cs">
+      <DependentUpon>BasicInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Departure.aspx.cs">
+      <DependentUpon>Departure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\Departure.aspx.designer.cs">
+      <DependentUpon>Departure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\DepartureEdit.aspx.cs">
+      <DependentUpon>DepartureEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\DepartureEdit.aspx.designer.cs">
+      <DependentUpon>DepartureEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Destination.aspx.cs">
+      <DependentUpon>Destination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\Destination.aspx.designer.cs">
+      <DependentUpon>Destination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\DestinationEdit.aspx.cs">
+      <DependentUpon>DestinationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\DestinationEdit.aspx.designer.cs">
+      <DependentUpon>DestinationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeEdit.aspx.cs">
+      <DependentUpon>NoticeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeEdit.aspx.designer.cs">
+      <DependentUpon>NoticeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeInfo.aspx.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeInfo.aspx.designer.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeList.aspx.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeList.aspx.designer.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeMrg.aspx.cs">
+      <DependentUpon>NoticeMrg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Glo\NoticeMrg.aspx.designer.cs">
+      <DependentUpon>NoticeMrg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Service\BasicInfo.ashx.cs">
+      <DependentUpon>BasicInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Service\Departure.ashx.cs">
+      <DependentUpon>Departure.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Service\Destination.ashx.cs">
+      <DependentUpon>Destination.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Service\NoticeMrg.ashx.cs">
+      <DependentUpon>NoticeMrg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Glo\Service\NoticeQuery.ashx.cs">
+      <DependentUpon>NoticeQuery.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Guide\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Guide\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Guide\UpdateLog.aspx.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Guide\UpdateLog.aspx.designer.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Initial\InitConfig.aspx.cs">
+      <DependentUpon>InitConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Initial\InitConfig.aspx.designer.cs">
+      <DependentUpon>InitConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Initial\Service\Init.ashx.cs">
+      <DependentUpon>Init.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\mSite\Service\mSite.ashx.cs">
+      <DependentUpon>mSite.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\mSite\SiteSetting.aspx.cs">
+      <DependentUpon>SiteSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\mSite\SiteSetting.aspx.designer.cs">
+      <DependentUpon>SiteSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\MyInfo.aspx.cs">
+      <DependentUpon>MyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\MyInfo.aspx.designer.cs">
+      <DependentUpon>MyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\MySms.aspx.cs">
+      <DependentUpon>MySms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\MySms.aspx.designer.cs">
+      <DependentUpon>MySms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\SendSms.aspx.cs">
+      <DependentUpon>SendSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\SendSms.aspx.designer.cs">
+      <DependentUpon>SendSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\Service\Message.ashx.cs">
+      <DependentUpon>Message.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\SmsView.aspx.cs">
+      <DependentUpon>SmsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\SmsView.aspx.designer.cs">
+      <DependentUpon>SmsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Fin\BalanceSettlement.aspx.cs">
+      <DependentUpon>BalanceSettlement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Fin\BalanceSettlement.aspx.designer.cs">
+      <DependentUpon>BalanceSettlement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OmReceivable.aspx.cs">
+      <DependentUpon>OmReceivable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OmReceivable.aspx.designer.cs">
+      <DependentUpon>OmReceivable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OrgOrderRpt.aspx.cs">
+      <DependentUpon>OrgOrderRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OrgOrderRpt.aspx.designer.cs">
+      <DependentUpon>OrgOrderRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OrgSetting.aspx.cs">
+      <DependentUpon>OrgSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OrgSetting.aspx.designer.cs">
+      <DependentUpon>OrgSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\PricePolicy.aspx.cs">
+      <DependentUpon>PricePolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\PricePolicy.aspx.designer.cs">
+      <DependentUpon>PricePolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\PushMessage.aspx.cs">
+      <DependentUpon>PushMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\PushMessage.aspx.designer.cs">
+      <DependentUpon>PushMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\PushNotice.aspx.cs">
+      <DependentUpon>PushNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\PushNotice.aspx.designer.cs">
+      <DependentUpon>PushNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\PushNoticeEdit.aspx.cs">
+      <DependentUpon>PushNoticeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\PushNoticeEdit.aspx.designer.cs">
+      <DependentUpon>PushNoticeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\QQEdit.aspx.cs">
+      <DependentUpon>QQEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\QQEdit.aspx.designer.cs">
+      <DependentUpon>QQEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\QRCode.aspx.cs">
+      <DependentUpon>QRCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\QRCode.aspx.designer.cs">
+      <DependentUpon>QRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\QuantityRpt.aspx.cs">
+      <DependentUpon>QuantityRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\QuantityRpt.aspx.designer.cs">
+      <DependentUpon>QuantityRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\ReceiptItem.aspx.cs">
+      <DependentUpon>ReceiptItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\ReceiptItem.aspx.designer.cs">
+      <DependentUpon>ReceiptItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\ReceiptRpt.aspx.cs">
+      <DependentUpon>ReceiptRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\ReceiptRpt.aspx.designer.cs">
+      <DependentUpon>ReceiptRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\GloPushNotice.ashx.cs">
+      <DependentUpon>GloPushNotice.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\OmRpt.ashx.cs">
+      <DependentUpon>OmRpt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\QQ.ashx.cs">
+      <DependentUpon>QQ.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Guide\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Guide\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Guide\Service\Index.ashx.cs">
+      <DependentUpon>Index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\Favorites.aspx.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\Favorites.aspx.designer.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\FavoritesEdit.aspx.cs">
+      <DependentUpon>FavoritesEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\FavoritesEdit.aspx.designer.cs">
+      <DependentUpon>FavoritesEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\MyMessage.aspx.cs">
+      <DependentUpon>MyMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\MyMessage.aspx.designer.cs">
+      <DependentUpon>MyMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\MyPasswrod.aspx.cs">
+      <DependentUpon>MyPasswrod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\MyPasswrod.aspx.designer.cs">
+      <DependentUpon>MyPasswrod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\Service\Favorites.ashx.cs">
+      <DependentUpon>Favorites.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\My\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\My\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Cache.aspx.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\Cache.aspx.designer.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\NavGroup.aspx.cs">
+      <DependentUpon>NavGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\NavGroup.aspx.designer.cs">
+      <DependentUpon>NavGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\NavGroupEdit.aspx.cs">
+      <DependentUpon>NavGroupEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\NavGroupEdit.aspx.designer.cs">
+      <DependentUpon>NavGroupEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Navigate.aspx.cs">
+      <DependentUpon>Navigate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\Navigate.aspx.designer.cs">
+      <DependentUpon>Navigate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\NavigateEdit.aspx.cs">
+      <DependentUpon>NavigateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\NavigateEdit.aspx.designer.cs">
+      <DependentUpon>NavigateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OmArea.aspx.cs">
+      <DependentUpon>OmArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OmArea.aspx.designer.cs">
+      <DependentUpon>OmArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OmAreaEdit.aspx.cs">
+      <DependentUpon>OmAreaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OmAreaEdit.aspx.designer.cs">
+      <DependentUpon>OmAreaEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OmUser.aspx.cs">
+      <DependentUpon>OmUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OmUser.aspx.designer.cs">
+      <DependentUpon>OmUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OmUserEdit.aspx.cs">
+      <DependentUpon>OmUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OmUserEdit.aspx.designer.cs">
+      <DependentUpon>OmUserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OnLineRpt.aspx.cs">
+      <DependentUpon>OnLineRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OnLineRpt.aspx.designer.cs">
+      <DependentUpon>OnLineRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OrgAdmin.aspx.cs">
+      <DependentUpon>OrgAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OrgAdmin.aspx.designer.cs">
+      <DependentUpon>OrgAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OrgInfo.aspx.cs">
+      <DependentUpon>OrgInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OrgInfo.aspx.designer.cs">
+      <DependentUpon>OrgInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\OrgInfoEdit.aspx.cs">
+      <DependentUpon>OrgInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\OrgInfoEdit.aspx.designer.cs">
+      <DependentUpon>OrgInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\QQ.aspx.cs">
+      <DependentUpon>QQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\QQ.aspx.designer.cs">
+      <DependentUpon>QQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\NavGroup.ashx.cs">
+      <DependentUpon>NavGroup.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\Navigate.ashx.cs">
+      <DependentUpon>Navigate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\OmArea.ashx.cs">
+      <DependentUpon>OmArea.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\OmUser.ashx.cs">
+      <DependentUpon>OmUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\OnLineRpt.ashx.cs">
+      <DependentUpon>OnLineRpt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\OrgInfo.ashx.cs">
+      <DependentUpon>OrgInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\ToolSetting.ashx.cs">
+      <DependentUpon>ToolSetting.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\UpdateLog.ashx.cs">
+      <DependentUpon>UpdateLog.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\Service\UserRpt.ashx.cs">
+      <DependentUpon>UserRpt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\SmsBalance.aspx.cs">
+      <DependentUpon>SmsBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\SmsBalance.aspx.designer.cs">
+      <DependentUpon>SmsBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\SmsRpt.aspx.cs">
+      <DependentUpon>SmsRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\SmsRpt.aspx.designer.cs">
+      <DependentUpon>SmsRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\SmsSetting.aspx.cs">
+      <DependentUpon>SmsSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\SmsSetting.aspx.designer.cs">
+      <DependentUpon>SmsSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\SmsSettingEdit.aspx.cs">
+      <DependentUpon>SmsSettingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\SmsSettingEdit.aspx.designer.cs">
+      <DependentUpon>SmsSettingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\ToolSetting.aspx.cs">
+      <DependentUpon>ToolSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\ToolSetting.aspx.designer.cs">
+      <DependentUpon>ToolSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\ToolSettingEdit.aspx.cs">
+      <DependentUpon>ToolSettingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\ToolSettingEdit.aspx.designer.cs">
+      <DependentUpon>ToolSettingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\UpdateLog.aspx.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\UpdateLog.aspx.designer.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\UpdateLogEdit.aspx.cs">
+      <DependentUpon>UpdateLogEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\UpdateLogEdit.aspx.designer.cs">
+      <DependentUpon>UpdateLogEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Om\UserRpt.aspx.cs">
+      <DependentUpon>UserRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Om\UserRpt.aspx.designer.cs">
+      <DependentUpon>UserRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\BizOrderInfo.aspx.cs">
+      <DependentUpon>BizOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\BizOrderInfo.aspx.designer.cs">
+      <DependentUpon>BizOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\BudgetBill.aspx.cs">
+      <DependentUpon>BudgetBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\BudgetBill.aspx.designer.cs">
+      <DependentUpon>BudgetBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\CollectedClaim.aspx.cs">
+      <DependentUpon>CollectedClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\CollectedClaim.aspx.designer.cs">
+      <DependentUpon>CollectedClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\CollectedSign.aspx.cs">
+      <DependentUpon>CollectedSign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\CollectedSign.aspx.designer.cs">
+      <DependentUpon>CollectedSign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceInfo.aspx.cs">
+      <DependentUpon>InvoiceInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceInfo.aspx.designer.cs">
+      <DependentUpon>InvoiceInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceOrderItem.aspx.cs">
+      <DependentUpon>InvoiceOrderItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceOrderItem.aspx.designer.cs">
+      <DependentUpon>InvoiceOrderItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderAudit.aspx.cs">
+      <DependentUpon>OrderAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderAudit.aspx.designer.cs">
+      <DependentUpon>OrderAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderAuditAction.aspx.cs">
+      <DependentUpon>OrderAuditAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderAuditAction.aspx.designer.cs">
+      <DependentUpon>OrderAuditAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderBiz.aspx.cs">
+      <DependentUpon>OrderBiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderBiz.aspx.designer.cs">
+      <DependentUpon>OrderBiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderBudget.aspx.cs">
+      <DependentUpon>OrderBudget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderBudget.aspx.designer.cs">
+      <DependentUpon>OrderBudget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderBudgetFinal.aspx.cs">
+      <DependentUpon>OrderBudgetFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderBudgetFinal.aspx.designer.cs">
+      <DependentUpon>OrderBudgetFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderCheckAccount.aspx.cs">
+      <DependentUpon>OrderCheckAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderCheckAccount.aspx.designer.cs">
+      <DependentUpon>OrderCheckAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderCheckAcctBill.aspx.cs">
+      <DependentUpon>OrderCheckAcctBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderCheckAcctBill.aspx.designer.cs">
+      <DependentUpon>OrderCheckAcctBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderClaim.aspx.cs">
+      <DependentUpon>OrderClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderClaim.aspx.designer.cs">
+      <DependentUpon>OrderClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderCollected.aspx.cs">
+      <DependentUpon>OrderCollected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderCollected.aspx.designer.cs">
+      <DependentUpon>OrderCollected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderGuide.aspx.cs">
+      <DependentUpon>OrderGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderGuide.aspx.designer.cs">
+      <DependentUpon>OrderGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderInvoice.aspx.cs">
+      <DependentUpon>OrderInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderInvoice.aspx.designer.cs">
+      <DependentUpon>OrderInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderQYT.aspx.cs">
+      <DependentUpon>OrderQYT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderQYT.aspx.designer.cs">
+      <DependentUpon>OrderQYT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderTHSK.aspx.cs">
+      <DependentUpon>OrderTHSK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderTHSK.aspx.designer.cs">
+      <DependentUpon>OrderTHSK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderZZB.aspx.cs">
+      <DependentUpon>OrderZZB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderZZB.aspx.designer.cs">
+      <DependentUpon>OrderZZB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\PaidInvoice.aspx.cs">
+      <DependentUpon>PaidInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\PaidInvoice.aspx.designer.cs">
+      <DependentUpon>PaidInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\CollectedClaim.ashx.cs">
+      <DependentUpon>CollectedClaim.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\InvoiceQry.ashx.cs">
+      <DependentUpon>InvoiceQry.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\OrderAudit.ashx.cs">
+      <DependentUpon>OrderAudit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\OrderClaim.ashx.cs">
+      <DependentUpon>OrderClaim.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\OrderInfo.ashx.cs">
+      <DependentUpon>OrderInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\OrderInvoice.ashx.cs">
+      <DependentUpon>OrderInvoice.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\OrderUtiltity.ashx.cs">
+      <DependentUpon>OrderUtiltity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\Service\TicketOrder.ashx.cs">
+      <DependentUpon>TicketOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\sTourNotice.aspx.cs">
+      <DependentUpon>sTourNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\sTourNotice.aspx.designer.cs">
+      <DependentUpon>sTourNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TeamOrderInfo.aspx.cs">
+      <DependentUpon>TeamOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TeamOrderInfo.aspx.designer.cs">
+      <DependentUpon>TeamOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TeamOrderList.aspx.cs">
+      <DependentUpon>TeamOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TeamOrderList.aspx.designer.cs">
+      <DependentUpon>TeamOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TicetOrderInfo.aspx.cs">
+      <DependentUpon>TicetOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TicetOrderInfo.aspx.designer.cs">
+      <DependentUpon>TicetOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TicketOrder.aspx.cs">
+      <DependentUpon>TicketOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TicketOrder.aspx.designer.cs">
+      <DependentUpon>TicketOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TicketOrderEdit.aspx.cs">
+      <DependentUpon>TicketOrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TicketOrderEdit.aspx.designer.cs">
+      <DependentUpon>TicketOrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\tOrderInfo.aspx.cs">
+      <DependentUpon>tOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\tOrderInfo.aspx.designer.cs">
+      <DependentUpon>tOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TourNotice.aspx.cs">
+      <DependentUpon>TourNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TourNotice.aspx.designer.cs">
+      <DependentUpon>TourNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TourOrderInfo.aspx.cs">
+      <DependentUpon>TourOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TourOrderInfo.aspx.designer.cs">
+      <DependentUpon>TourOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TourOrders.aspx.cs">
+      <DependentUpon>TourOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TourOrders.aspx.designer.cs">
+      <DependentUpon>TourOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\zOrderInfo.aspx.cs">
+      <DependentUpon>zOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\zOrderInfo.aspx.designer.cs">
+      <DependentUpon>zOrderInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\zTourNotice.aspx.cs">
+      <DependentUpon>zTourNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\zTourNotice.aspx.designer.cs">
+      <DependentUpon>zTourNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\OccupySeat.aspx.cs">
+      <DependentUpon>OccupySeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\OccupySeat.aspx.designer.cs">
+      <DependentUpon>OccupySeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\OpenTour.aspx.cs">
+      <DependentUpon>OpenTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\OpenTour.aspx.designer.cs">
+      <DependentUpon>OpenTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\ProBook.aspx.cs">
+      <DependentUpon>ProBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\ProBook.aspx.designer.cs">
+      <DependentUpon>ProBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\ProList.aspx.cs">
+      <DependentUpon>ProList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\ProList.aspx.designer.cs">
+      <DependentUpon>ProList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\ProNav.aspx.cs">
+      <DependentUpon>ProNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\ProNav.aspx.designer.cs">
+      <DependentUpon>ProNav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\RouteEdit.aspx.cs">
+      <DependentUpon>RouteEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\RouteEdit.aspx.designer.cs">
+      <DependentUpon>RouteEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\RouteInfo.aspx.cs">
+      <DependentUpon>RouteInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\RouteInfo.aspx.designer.cs">
+      <DependentUpon>RouteInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\RouteMrg.aspx.cs">
+      <DependentUpon>RouteMrg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\RouteMrg.aspx.designer.cs">
+      <DependentUpon>RouteMrg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Service\ProSearch.ashx.cs">
+      <DependentUpon>ProSearch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Service\RouteMrg.ashx.cs">
+      <DependentUpon>RouteMrg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Service\TourCalendar.ashx.cs">
+      <DependentUpon>TourCalendar.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Service\TourInfo.ashx.cs">
+      <DependentUpon>TourInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Service\Venue.ashx.cs">
+      <DependentUpon>Venue.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\TourEdit.aspx.cs">
+      <DependentUpon>TourEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\TourEdit.aspx.designer.cs">
+      <DependentUpon>TourEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\TourList.aspx.cs">
+      <DependentUpon>TourList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\TourList.aspx.designer.cs">
+      <DependentUpon>TourList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\Venue.aspx.cs">
+      <DependentUpon>Venue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\Venue.aspx.designer.cs">
+      <DependentUpon>Venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Pro\VenueEdit.aspx.cs">
+      <DependentUpon>VenueEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Pro\VenueEdit.aspx.designer.cs">
+      <DependentUpon>VenueEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Guide.aspx.cs">
+      <DependentUpon>Guide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Guide.aspx.designer.cs">
+      <DependentUpon>Guide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\GuideEdit.aspx.cs">
+      <DependentUpon>GuideEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\GuideEdit.aspx.designer.cs">
+      <DependentUpon>GuideEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\GuideInfo.aspx.cs">
+      <DependentUpon>GuideInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\GuideInfo.aspx.designer.cs">
+      <DependentUpon>GuideInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\GuideQry.aspx.cs">
+      <DependentUpon>GuideQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\GuideQry.aspx.designer.cs">
+      <DependentUpon>GuideQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\GuideTile.aspx.cs">
+      <DependentUpon>GuideTile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\GuideTile.aspx.designer.cs">
+      <DependentUpon>GuideTile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Hotel.aspx.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Hotel.aspx.designer.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\HotelEdit.aspx.cs">
+      <DependentUpon>HotelEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\HotelEdit.aspx.designer.cs">
+      <DependentUpon>HotelEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\HotelInfo.aspx.cs">
+      <DependentUpon>HotelInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\HotelInfo.aspx.designer.cs">
+      <DependentUpon>HotelInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\HotelQry.aspx.cs">
+      <DependentUpon>HotelQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\HotelQry.aspx.designer.cs">
+      <DependentUpon>HotelQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\HotelTile.aspx.cs">
+      <DependentUpon>HotelTile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\HotelTile.aspx.designer.cs">
+      <DependentUpon>HotelTile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Insurer.aspx.cs">
+      <DependentUpon>Insurer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Insurer.aspx.designer.cs">
+      <DependentUpon>Insurer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\InsurerEdit.aspx.cs">
+      <DependentUpon>InsurerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\InsurerEdit.aspx.designer.cs">
+      <DependentUpon>InsurerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\InsurerInfo.aspx.cs">
+      <DependentUpon>InsurerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\InsurerInfo.aspx.designer.cs">
+      <DependentUpon>InsurerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\InsurerQry.aspx.cs">
+      <DependentUpon>InsurerQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\InsurerQry.aspx.designer.cs">
+      <DependentUpon>InsurerQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Motorcade.aspx.cs">
+      <DependentUpon>Motorcade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Motorcade.aspx.designer.cs">
+      <DependentUpon>Motorcade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeEdit.aspx.cs">
+      <DependentUpon>MotorcadeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeEdit.aspx.designer.cs">
+      <DependentUpon>MotorcadeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeInfo.aspx.cs">
+      <DependentUpon>MotorcadeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeInfo.aspx.designer.cs">
+      <DependentUpon>MotorcadeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeQry.aspx.cs">
+      <DependentUpon>MotorcadeQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\MotorcadeQry.aspx.designer.cs">
+      <DependentUpon>MotorcadeQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\OtherRes.aspx.cs">
+      <DependentUpon>OtherRes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\OtherRes.aspx.designer.cs">
+      <DependentUpon>OtherRes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\OtherResEdit.aspx.cs">
+      <DependentUpon>OtherResEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\OtherResEdit.aspx.designer.cs">
+      <DependentUpon>OtherResEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\OtherResInfo.aspx.cs">
+      <DependentUpon>OtherResInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\OtherResInfo.aspx.designer.cs">
+      <DependentUpon>OtherResInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\OtherResQry.aspx.cs">
+      <DependentUpon>OtherResQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\OtherResQry.aspx.designer.cs">
+      <DependentUpon>OtherResQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpot.aspx.cs">
+      <DependentUpon>ScenicSpot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpot.aspx.designer.cs">
+      <DependentUpon>ScenicSpot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotEdit.aspx.cs">
+      <DependentUpon>ScenicSpotEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotEdit.aspx.designer.cs">
+      <DependentUpon>ScenicSpotEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotInfo.aspx.cs">
+      <DependentUpon>ScenicSpotInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotInfo.aspx.designer.cs">
+      <DependentUpon>ScenicSpotInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotQry.aspx.cs">
+      <DependentUpon>ScenicSpotQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotQry.aspx.designer.cs">
+      <DependentUpon>ScenicSpotQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotTile.aspx.cs">
+      <DependentUpon>ScenicSpotTile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ScenicSpotTile.aspx.designer.cs">
+      <DependentUpon>ScenicSpotTile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\SelectGuide.aspx.cs">
+      <DependentUpon>SelectGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\SelectGuide.aspx.designer.cs">
+      <DependentUpon>SelectGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Guide.ashx.cs">
+      <DependentUpon>Guide.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Hotel.ashx.cs">
+      <DependentUpon>Hotel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Insurance.ashx.cs">
+      <DependentUpon>Insurance.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Motorcade.ashx.cs">
+      <DependentUpon>Motorcade.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\OtherRes.ashx.cs">
+      <DependentUpon>OtherRes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Resource.ashx.cs">
+      <DependentUpon>Resource.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\ScenicTicket.ashx.cs">
+      <DependentUpon>ScenicTicket.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Shopping.ashx.cs">
+      <DependentUpon>Shopping.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\TicketAgency.ashx.cs">
+      <DependentUpon>TicketAgency.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\TravelAgency.ashx.cs">
+      <DependentUpon>TravelAgency.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Service\Visa.ashx.cs">
+      <DependentUpon>Visa.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Shopping.aspx.cs">
+      <DependentUpon>Shopping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Shopping.aspx.designer.cs">
+      <DependentUpon>Shopping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingEdit.aspx.cs">
+      <DependentUpon>ShoppingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingEdit.aspx.designer.cs">
+      <DependentUpon>ShoppingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingInfo.aspx.cs">
+      <DependentUpon>ShoppingInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingInfo.aspx.designer.cs">
+      <DependentUpon>ShoppingInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingQry.aspx.cs">
+      <DependentUpon>ShoppingQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\ShoppingQry.aspx.designer.cs">
+      <DependentUpon>ShoppingQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Ticket.aspx.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Ticket.aspx.designer.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TicketEdit.aspx.cs">
+      <DependentUpon>TicketEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TicketEdit.aspx.designer.cs">
+      <DependentUpon>TicketEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TicketInfo.aspx.cs">
+      <DependentUpon>TicketInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TicketInfo.aspx.designer.cs">
+      <DependentUpon>TicketInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TicketQry.aspx.cs">
+      <DependentUpon>TicketQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TicketQry.aspx.designer.cs">
+      <DependentUpon>TicketQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TradeOrder.aspx.cs">
+      <DependentUpon>TradeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TradeOrder.aspx.designer.cs">
+      <DependentUpon>TradeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TravalAgencyEdit.aspx.cs">
+      <DependentUpon>TravalAgencyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TravalAgencyEdit.aspx.designer.cs">
+      <DependentUpon>TravalAgencyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgency.aspx.cs">
+      <DependentUpon>TravelAgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgency.aspx.designer.cs">
+      <DependentUpon>TravelAgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyInfo.aspx.cs">
+      <DependentUpon>TravelAgencyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyInfo.aspx.designer.cs">
+      <DependentUpon>TravelAgencyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyQry.aspx.cs">
+      <DependentUpon>TravelAgencyQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyQry.aspx.designer.cs">
+      <DependentUpon>TravelAgencyQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyTile.aspx.cs">
+      <DependentUpon>TravelAgencyTile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\TravelAgencyTile.aspx.designer.cs">
+      <DependentUpon>TravelAgencyTile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\Visa.aspx.cs">
+      <DependentUpon>Visa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\Visa.aspx.designer.cs">
+      <DependentUpon>Visa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\VisaEdit.aspx.cs">
+      <DependentUpon>VisaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\VisaEdit.aspx.designer.cs">
+      <DependentUpon>VisaEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\VisaInfo.aspx.cs">
+      <DependentUpon>VisaInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\VisaInfo.aspx.designer.cs">
+      <DependentUpon>VisaInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Res\VisaQry.aspx.cs">
+      <DependentUpon>VisaQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Res\VisaQry.aspx.designer.cs">
+      <DependentUpon>VisaQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceQry.aspx.cs">
+      <DependentUpon>InvoiceQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\InvoiceQry.aspx.designer.cs">
+      <DependentUpon>InvoiceQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\SingleBiz.aspx.cs">
+      <DependentUpon>SingleBiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\SingleBiz.aspx.designer.cs">
+      <DependentUpon>SingleBiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\BizRpt.aspx.cs">
+      <DependentUpon>BizRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\BizRpt.aspx.designer.cs">
+      <DependentUpon>BizRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\CustomerRate.aspx.cs">
+      <DependentUpon>CustomerRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\CustomerRate.aspx.designer.cs">
+      <DependentUpon>CustomerRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\DeptProfit.aspx.cs">
+      <DependentUpon>DeptProfit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\DeptProfit.aspx.designer.cs">
+      <DependentUpon>DeptProfit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\Income.aspx.cs">
+      <DependentUpon>Income.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\Income.aspx.designer.cs">
+      <DependentUpon>Income.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\IncomeCheckIn.aspx.cs">
+      <DependentUpon>IncomeCheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\IncomeCheckIn.aspx.designer.cs">
+      <DependentUpon>IncomeCheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderQuantity.aspx.cs">
+      <DependentUpon>OrderQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderQuantity.aspx.designer.cs">
+      <DependentUpon>OrderQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderSheet.aspx.cs">
+      <DependentUpon>OrderSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderSheet.aspx.designer.cs">
+      <DependentUpon>OrderSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderSource.aspx.cs">
+      <DependentUpon>OrderSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\OrderSource.aspx.designer.cs">
+      <DependentUpon>OrderSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\PaidItem.aspx.cs">
+      <DependentUpon>PaidItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\PaidItem.aspx.designer.cs">
+      <DependentUpon>PaidItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\PayCheckIn.aspx.cs">
+      <DependentUpon>PayCheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\PayCheckIn.aspx.designer.cs">
+      <DependentUpon>PayCheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\Service\RptUtility.ashx.cs">
+      <DependentUpon>RptUtility.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\StatisticRpt.aspx.cs">
+      <DependentUpon>StatisticRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\StatisticRpt.aspx.designer.cs">
+      <DependentUpon>StatisticRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\SupplierPayable.aspx.cs">
+      <DependentUpon>SupplierPayable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\SupplierPayable.aspx.designer.cs">
+      <DependentUpon>SupplierPayable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Rpt\UserProfit.aspx.cs">
+      <DependentUpon>UserProfit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Rpt\UserProfit.aspx.designer.cs">
+      <DependentUpon>UserProfit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Search\CustomerSearch.aspx.cs">
+      <DependentUpon>CustomerSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Search\CustomerSearch.aspx.designer.cs">
+      <DependentUpon>CustomerSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Search\OrderSearch.aspx.cs">
+      <DependentUpon>OrderSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Search\OrderSearch.aspx.designer.cs">
+      <DependentUpon>OrderSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Search\ResourceSearch.aspx.cs">
+      <DependentUpon>ResourceSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Search\ResourceSearch.aspx.designer.cs">
+      <DependentUpon>ResourceSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Search\RouteSearch.aspx.cs">
+      <DependentUpon>RouteSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Search\RouteSearch.aspx.designer.cs">
+      <DependentUpon>RouteSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Search\Service\Searcher.ashx.cs">
+      <DependentUpon>Searcher.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\AreaTreeTable.aspx.cs">
+      <DependentUpon>AreaTreeTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\AreaTreeTable.aspx.designer.cs">
+      <DependentUpon>AreaTreeTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Dept.aspx.cs">
+      <DependentUpon>Dept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\Dept.aspx.designer.cs">
+      <DependentUpon>Dept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\DeptEdit.aspx.cs">
+      <DependentUpon>DeptEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\DeptEdit.aspx.designer.cs">
+      <DependentUpon>DeptEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\LogInfo.aspx.cs">
+      <DependentUpon>LogInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\LogInfo.aspx.designer.cs">
+      <DependentUpon>LogInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\OTAEdit.aspx.cs">
+      <DependentUpon>OTAEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\OTAEdit.aspx.designer.cs">
+      <DependentUpon>OTAEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\OTASetting.aspx.cs">
+      <DependentUpon>OTASetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\OTASetting.aspx.designer.cs">
+      <DependentUpon>OTASetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\OTAUser.aspx.cs">
+      <DependentUpon>OTAUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\OTAUser.aspx.designer.cs">
+      <DependentUpon>OTAUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\OTAUserList.aspx.cs">
+      <DependentUpon>OTAUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\OTAUserList.aspx.designer.cs">
+      <DependentUpon>OTAUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Permission.aspx.cs">
+      <DependentUpon>Permission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\Permission.aspx.designer.cs">
+      <DependentUpon>Permission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\RoleEdit.aspx.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\RoleEdit.aspx.designer.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\SelectOTAArea.aspx.cs">
+      <DependentUpon>SelectOTAArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\SelectOTAArea.aspx.designer.cs">
+      <DependentUpon>SelectOTAArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\SelectOTAUser.aspx.cs">
+      <DependentUpon>SelectOTAUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\SelectOTAUser.aspx.designer.cs">
+      <DependentUpon>SelectOTAUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\Area.ashx.cs">
+      <DependentUpon>Area.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\Log.ashx.cs">
+      <DependentUpon>Log.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\OTASetting.ashx.cs">
+      <DependentUpon>OTASetting.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\Permission.ashx.cs">
+      <DependentUpon>Permission.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\Role.ashx.cs">
+      <DependentUpon>Role.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\Department.ashx.cs">
+      <DependentUpon>Department.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\SysInfoSet.ashx.cs">
+      <DependentUpon>SysInfoSet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\Service\User.ashx.cs">
+      <DependentUpon>User.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\SysInfoSet.aspx.cs">
+      <DependentUpon>SysInfoSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\SysInfoSet.aspx.designer.cs">
+      <DependentUpon>SysInfoSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Order\TourOrderList.aspx.cs">
+      <DependentUpon>TourOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Order\TourOrderList.aspx.designer.cs">
+      <DependentUpon>TourOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sys\UserPermission.aspx.cs">
+      <DependentUpon>UserPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sys\UserPermission.aspx.designer.cs">
+      <DependentUpon>UserPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\T\RouteEdit.aspx.cs">
+      <DependentUpon>RouteEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\T\RouteEdit.aspx.designer.cs">
+      <DependentUpon>RouteEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\T\RouteInfo.aspx.cs">
+      <DependentUpon>RouteInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\T\RouteInfo.aspx.designer.cs">
+      <DependentUpon>RouteInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\T\RouteList.aspx.cs">
+      <DependentUpon>RouteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\T\RouteList.aspx.designer.cs">
+      <DependentUpon>RouteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\T\Service\RouteTemplate.ashx.cs">
+      <DependentUpon>RouteTemplate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\T\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\T\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CommonData.ashx.cs">
+      <DependentUpon>CommonData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Index.ashx.cs">
+      <DependentUpon>Index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\VerifyCode.ashx.cs">
+      <DependentUpon>VerifyCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TmsHelp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\Temp\" />
+    <Folder Include="Files\Wechat\" />
+    <Folder Include="Module\Pro\RouteFile\" />
+    <Folder Include="Module\T\Files\" />
+    <Folder Include="Scripts\Plugin\kindeditor\attached\file\" />
+    <Folder Include="Scripts\Plugin\kindeditor\attached\flash\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Down\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Plugin\kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="Scripts\Plugin\kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="Scripts\Plugin\kindeditor\php\demo.php" />
+    <Content Include="Scripts\Plugin\kindeditor\php\file_manager_json.php" />
+    <Content Include="Scripts\Plugin\kindeditor\php\JSON.php" />
+    <Content Include="Scripts\Plugin\kindeditor\php\upload_json.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\drp.core.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Index.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Default.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\ie11fixed.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\themes\default\images\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\OmUser.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\NavGroup.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\OrgInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\Navigate.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\OmArea.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Sys\Service\Department.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Sys\Service\User.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Sys\Service\Role.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Sys\Service\Log.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Sys\Service\Permission.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Glo\Service\BasicInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Crm\Service\Customer.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Glo\Service\Departure.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Glo\Service\Destination.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pro\Service\Venue.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pro\Service\RouteMrg.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\CommonData.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Crm\Resource\客户资料导入表格.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Crm\Service\CustomerVisit.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pro\Service\TourCalendar.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pro\Service\TourInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\TravelAgency.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Resource.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Guide.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Hotel.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Motorcade.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Visa.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Insurance.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\OtherRes.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\Shopping.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\TicketAgency.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Res\Service\ScenicTicket.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\ToolSetting.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\My\Service\Favorites.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\T\Service\RouteTemplate.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Glo\Service\NoticeMrg.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Glo\Service\NoticeQuery.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\OrderUtiltity.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\OrderInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pro\Service\ProSearch.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\OrderInvoice.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\InvoiceQry.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\CheckIn\Service\IncomeSign.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\CheckIn\Service\PaySign.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Resource\T.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\CollectedItem.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\InvoiceMrg.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Rpt\Service\RptUtility.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\DrawMoney.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\OrderInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\CollectedClaim.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Order\Service\OrderClaim.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\OrderCollected.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\PaidInvoice.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Guide\Service\Index.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\UserRpt.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\OnLineRpt.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\VerifyCode.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\CheckAccount\ChkAcct.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\CheckAccount\Service\OrderCheckAccount.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\Payable.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\PaidItem.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Fin\Service\PayableItem.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\QQ.ashx" />
+    <Content Include="Module\My\Service\Message.ashx" />
+    <Content Include="Module\Initial\Service\Init.ashx" />
+    <Content Include="Module\Search\Service\Searcher.ashx" />
+    <Content Include="Module\Om\Service\UpdateLog.ashx" />
+    <Content Include="Web References\TmsHelp\webserviceinfo.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.360ly.com/webserviceinfo.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TmsHelp\</RelPath>
+      <UpdateFromURL>http://www.360ly.com/webserviceinfo.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DRP_WEB_TmsHelp_WebServiceInfo</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Om\Service\OmRpt.ashx" />
+    <Content Include="Module\Fin\Service\BalanceSettlement.ashx" />
+    <Content Include="Module\Order\Service\TicketOrder.ashx" />
+    <Content Include="Module\Fin\Service\TicketOrder.ashx" />
+    <Content Include="Module\Order\Service\OrderAudit.ashx" />
+    <Content Include="Module\mSite\Service\mSite.ashx" />
+    <Content Include="Files\eShop\Web.config" />
+    <Content Include="Module\Om\Service\GloPushNotice.ashx" />
+    <Content Include="Module\Sys\Service\Area.ashx" />
+    <Content Include="Module\Sys\Service\OTASetting.ashx" />
+    <Content Include="Module\Sys\Service\SysInfoSet.ashx" />
+    <None Include="Properties\PublishProfiles\TMS3.0.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tms.Lib\DRP.BF\DRP.BF.csproj">
+      <Project>{771c529b-f853-4901-be5a-c78780486265}</Project>
+      <Name>DRP.BF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tms.Lib\DRP.DAL\DRP.DAL.csproj">
+      <Project>{667ec98e-fe05-4c7d-89a8-ca52c9c074e2}</Project>
+      <Name>DRP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tms.Lib\DRP.Framework\DRP.Framework.csproj">
+      <Project>{e93c2c74-08d0-4710-b26b-56864ce28a3f}</Project>
+      <Name>DRP.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tms.Lib\DRP.Message\DRP.Message.csproj">
+      <Project>{538893f4-b47d-4e57-b640-83a36e5df9de}</Project>
+      <Name>DRP.Message</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14438</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
